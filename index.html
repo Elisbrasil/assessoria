@@ -2,480 +2,642 @@
 <html lang="pt-BR">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Juk Cattani · Um paciente-problema não avisa antes de aparecer</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Assessoria Jurídica para Clínicas de Harmonização | Juk Cattani</title>
 
+  <style>
+    /* Roboto (subset latin) - fonte variavel, pesos 100-900.
+       Arquivo local em fonts/. Sem requisicao externa: a pagina nao depende do Google Fonts. */
+    @font-face {
+      font-family: 'Roboto';
+      font-style: normal;
+      font-weight: 100 900;
+      font-display: swap;
+      src: url('fonts/roboto-variable-latin.woff2') format('woff2');
+      unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+    }
+  </style>
+  <style>
+    html,
+    body {
+      margin: 0;
+      padding: 0;
+      background: #F7F4EF;
+    }
+
+    * {
+      box-sizing: border-box;
+      font-style: normal !important;
+    }
+
+    body {
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a {
+      color: #8F4526;
+      text-decoration: none;
+    }
+
+    a:hover {
+      color: #0E1720;
+    }
+
+    details summary::-webkit-details-marker {
+      display: none;
+    }
+
+    ::selection {
+      background: #E8D5CB;
+      color: #0E1720;
+    }
+
+    #galeria-escritorio {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    #galeria-escritorio>div {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+    }
+
+    #galeria-escritorio figure {
+      margin: 0;
+      min-width: 0;
+      overflow: hidden;
+      border-radius: 4px;
+      border: 1px solid #DED7CC;
+      background: #E7E1D8;
+    }
+
+    #galeria-escritorio img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      filter: saturate(0.88);
+      transition: transform 0.5s ease, filter 0.4s ease;
+    }
+
+    #galeria-escritorio figure:hover img {
+      transform: scale(1.04);
+      filter: saturate(1);
+    }
+
+    @media (max-width: 760px) {
+      #galeria-escritorio>div {
+        flex-wrap: wrap;
+      }
+
+      #galeria-escritorio figure[data-f="larga"] {
+        flex: 1 1 100%;
+      }
+
+      #galeria-escritorio figure[data-f="alta"] {
+        flex: 1 1 calc(50% - 5px);
+      }
+    }
+  </style>
+
+  <style>
+    /* hovers do protótipo, convertidos para CSS real */
+    .hv-1:hover {
+      border-color: #A04E2C !important
+    }
+
+    .hv-2:hover {
+      background: #A04E2C !important
+    }
+
+    .hv-3:hover {
+      background: #B25B38 !important
+    }
+
+    .hv-4:hover {
+      color: #F7F4EF !important
+    }
+
+    .hv-5:hover {
+      color: #F7F4EF !important
+    }
+
+    .hv-6:hover {
+      color: #F7F4EF !important
+    }
+
+    .hv-7:hover {
+      color: #F7F4EF !important
+    }
+
+    .hv-8:hover {
+      color: #F7F4EF !important
+    }
+  </style>
 </head>
 
 <body>
+  <div style="font-family:Roboto,Helvetica,Arial,sans-serif;color:#0E1720;background:#F7F4EF;width:100%;overflow-x:hidden">
 
-  <header id="siteHeader">
-    <div class="wrap">
-      <a href="https://jukcattani.com.br" class="logo"><span></span></a>
-      <a href="https://api.whatsapp.com/send?phone=5547996941734&text=Ol%C3%A1%20equipe%20Juk%20Cattani%2C%20vim%20pela%20p%C3%A1gina%20de%20assessoria%20e%20gostaria%20de%20receber%20um%20atendimento%20personalizado" class="nav-cta">Fale com a gente</a>
-    </div>
-  </header>
+    <header style="position:sticky;top:0;z-index:50;background:rgba(14,23,32,0.96);backdrop-filter:blur(8px);border-bottom:1px solid rgba(255,255,255,0.08)">
 
-  <section class="hero">
-    <div class="wrap">
-      <div class="hero-grid">
-        <div>
-          <h1 class="reveal">Proteção jurídica contínua, com a <em>estratégia que a clínica exige</em></h1>
-          <p class="hero-sub reveal">Existe um padrão de proteção que só as maiores clínicas da harmonização têm. Elas não esperam o processo chegar para agir, têm um time cuidando disso todo mês, antes que vire notícia, antes que vire prejuízo.</p>
-          <div class="hero-actions reveal">
-            <a href="https://api.whatsapp.com/send?phone=5547996941734&text=Ol%C3%A1%20equipe%20Juk%20Cattani%2C%20vim%20pela%20p%C3%A1gina%20de%20assessoria%20e%20gostaria%20de%20receber%20um%20atendimento%20personalizado" class="btn">Falar com um especialista</a>
+    </header>
+
+    <section data-screen-label="Hero" style="background:#0E1720;color:#F7F4EF;padding:0">
+      <div style="position:relative;min-height:clamp(520px,76vh,720px);display:flex;align-items:center;justify-content:center;background:#0E1720;overflow:hidden">
+        <img src="uploads/v2_1fe9155b-dc1f-48e5-9faa-e2992ee0d96f.webp" alt="Guilherme Juk Cattani palestrando para uma plateia de profissionais da harmonização" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 50%;display:block">
+        <div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(14,23,32,0.72) 0%,rgba(14,23,32,0.84) 100%)"></div>
+        <div style="position:relative;max-width:960px;padding:clamp(72px,10vw,120px) 24px clamp(48px,6vw,80px);display:flex;flex-direction:column;align-items:center;gap:26px;text-align:center">
+          <span style="font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:12px;letter-spacing:0.16em;text-transform:uppercase;color:#E8C0AB">Assessoria jurídica contínua · Harmonização</span>
+          <h1 style="margin:0;font-size:clamp(34px,5.4vw,66px);line-height:1.04;font-weight:900;letter-spacing:-0.02em;text-wrap:pretty;max-width:22ch">Um jurídico só pra você, com a estratégia que a sua clínica precisa</h1>
+
+          <p style="margin:0;font-size:clamp(16px,1.5vw,18px);line-height:1.65;color:#D7DEE3;max-width:52ch;text-wrap:pretty">As clínicas que mais crescem no país não esperam o processo chegar para agir. Elas têm um time cuidando disso todo mês, antes que vire notícia, antes que vire prejuízo.</p>
+          <div style="display:flex;flex-wrap:wrap;gap:12px;align-items:center;justify-content:center">
+
+
           </div>
         </div>
+      </div>
 
-        <div class="reveal">
-          <div class="hero-video-frame img-slot">
-            <div class="img-slot-inner">
-              <span class="desc">Vai uma foto do Guilherme aqui (talvez)</span>
+      <div style="border-top:1px solid rgba(247,244,239,0.1)">
+        <div style="max-width:1240px;margin:0 auto;padding:20px 24px;display:flex;flex-wrap:wrap;gap:10px 28px;align-items:center;justify-content:space-between">
+          <span style="font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:#8896A2">Desde 2019 · Balneário Camboriú · Atuação nacional</span>
+          <span style="font-size:13px;color:#C3CDD4">Atendimento ilimitado · Processos judiciais, éticos e trabalhistas inclusos</span>
+        </div>
+      </div>
+    </section>
+
+
+
+
+
+    <section data-screen-label="Números" style="background:#16232E;color:#F7F4EF;padding:clamp(56px,7vw,96px) 24px">
+      <div style="max-width:1240px;margin:0 auto;display:flex;flex-direction:column;gap:clamp(28px,3.5vw,44px)">
+        <span style="font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:#C97650">Números do time</span>
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1px;background:rgba(247,244,239,0.14)">
+          <div style="background:#16232E;padding:clamp(20px,2.5vw,32px) 4px 4px 0;display:flex;flex-direction:column;gap:14px">
+            <div style="display:flex;align-items:flex-start;font-weight:900;letter-spacing:-0.045em;line-height:0.86;color:#F7F4EF">
+              <span data-count="1" style="font-size:clamp(72px,11vw,140px)">1</span>
+              <span style="font-size:clamp(28px,4vw,52px);color:#C97650;padding-top:0.12em">º</span>
             </div>
-            <div class="hero-video-caption">
-              <div class="hero-video-caption-text">
-                <span class="hvc-eyebrow"></span>
-                <span class="hvc-title"></span>
-                <span class="hvc-cta"></span>
+            <p style="margin:0;font-size:15px;line-height:1.5;color:#C3CDD4;max-width:26ch;text-wrap:pretty">escritório do Brasil dedicado integralmente ao Direito na harmonização</p>
+          </div>
+          <div style="background:#16232E;padding:clamp(20px,2.5vw,32px) 4px 4px clamp(20px,3vw,36px);display:flex;flex-direction:column;gap:14px">
+            <div style="display:flex;align-items:flex-start;font-weight:900;letter-spacing:-0.045em;line-height:0.86;color:#F7F4EF">
+              <span style="font-size:clamp(28px,4vw,52px);color:#C97650;padding-top:0.12em">+</span>
+              <span data-count="60" style="font-size:clamp(72px,11vw,140px)">60</span>
+            </div>
+            <p style="margin:0;font-size:15px;line-height:1.5;color:#C3CDD4;max-width:26ch;text-wrap:pretty">advogados e especialistas trabalhando pela sua proteção</p>
+          </div>
+          <div style="background:#16232E;padding:clamp(20px,2.5vw,32px) 4px 4px clamp(20px,3vw,36px);display:flex;flex-direction:column;gap:14px">
+            <div style="display:flex;align-items:flex-start;font-weight:900;letter-spacing:-0.045em;line-height:0.86;color:#F7F4EF">
+              <span style="font-size:clamp(28px,4vw,52px);color:#C97650;padding-top:0.12em">+</span>
+              <span data-count="4000" style="font-size:clamp(72px,11vw,140px)">4000</span>
+            </div>
+            <p style="margin:0;font-size:15px;line-height:1.5;color:#C3CDD4;max-width:26ch;text-wrap:pretty">processos acompanhados pelo time em todo o Brasil</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section data-screen-label="Clínicas que você admira" style="background:#F7F4EF;padding:clamp(56px,7vw,104px) 24px">
+      <div style="max-width:1240px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:clamp(28px,4vw,56px);align-items:center">
+        <div style="min-width:0;position:relative;aspect-ratio:3/2;border-radius:4px;overflow:hidden;background:#E7E1D8">
+          <img src="uploads/time-escritorio-grupo.webp" alt="Time do escritório Juk Cattani reunido na sede em Balneário Camboriú" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 50%;display:block">
+        </div>
+        <div style="min-width:0;display:flex;flex-direction:column;gap:22px">
+          <span style="font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:#8F4526">O padrão das maiores</span>
+          <h2 style="margin:0;font-size:clamp(28px,3.4vw,44px);line-height:1.1;font-weight:700;letter-spacing:-0.015em;text-wrap:pretty">Repare nas clínicas que você admira. Elas têm algo em comum.</h2>
+          <p style="margin:0;font-size:clamp(16px,1.4vw,18px);line-height:1.65;color:#4A555E;max-width:50ch;text-wrap:pretty">Crescem em ritmo constante, sem sustos no meio do caminho. Não param por causa de um paciente insatisfeito. Não têm sócio brigando publicamente com sócio. Isso vem de um cuidado jurídico que acompanha o negócio todo mês, não de sorte.</p>
+        </div>
+      </div>
+    </section>
+    <section data-screen-label="O que muda" style="background:#F7F4EF;padding:0 24px clamp(56px,7vw,96px)">
+      <div style="max-width:1240px;margin:0 auto;display:flex;flex-direction:column;gap:clamp(28px,3.5vw,44px)">
+        <div style="display:flex;flex-direction:column;gap:14px;border-top:1px solid #DED7CC;padding-top:28px">
+          <h2 style="margin:0;font-size:clamp(28px,3.4vw,44px);line-height:1.1;font-weight:700;letter-spacing:-0.015em;max-width:24ch;text-wrap:pretty">O que muda quando você para de correr atrás do problema.</h2>
+          <p style="margin:0;font-size:clamp(17px,1.6vw,20px);line-height:1.4;font-weight:500;color:#8F4526;max-width:40ch;text-wrap:pretty">O que a assessoria cobre todo mês</p>
+        </div>
+
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:clamp(28px,3.5vw,48px) clamp(24px,3vw,40px)">
+          <div style="display:flex;flex-direction:column;gap:14px">
+            <svg width="42" height="42" viewBox="0 0 24 24" fill="none" stroke="#A04E2C" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" style="flex:0 0 auto">
+              <circle cx="9" cy="8" r="3"></circle>
+              <path d="M3 20c0-3.3 2.7-6 6-6s6 2.7 6 6"></path>
+              <circle cx="17.5" cy="9" r="2.5"></circle>
+            </svg>
+            <h3 style="margin:0;font-size:20px;line-height:1.25;font-weight:700;letter-spacing:-0.01em">Monitoramento mensal</h3>
+            <p style="margin:0;font-size:15px;line-height:1.6;color:#4A555E;max-width:34ch;text-wrap:pretty">Um time de +60 pessoas monitorando sua clínica todos os meses.</p>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:14px">
+            <svg width="42" height="42" viewBox="0 0 24 24" fill="none" stroke="#A04E2C" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" style="flex:0 0 auto">
+              <path d="M12 3l8 3v6c0 5-4 8-8 9-4-1-8-4-8-9V6z"></path>
+            </svg>
+            <h3 style="margin:0;font-size:20px;line-height:1.25;font-weight:700;letter-spacing:-0.01em">Atualização regulatória</h3>
+            <p style="margin:0;font-size:15px;line-height:1.6;color:#4A555E;max-width:34ch;text-wrap:pretty">Atualização contínua com as resoluções dos conselhos e da ANVISA.</p>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:14px">
+            <svg width="42" height="42" viewBox="0 0 24 24" fill="none" stroke="#A04E2C" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" style="flex:0 0 auto">
+              <circle cx="8.5" cy="12" r="4.5"></circle>
+              <circle cx="15.5" cy="12" r="4.5"></circle>
+            </svg>
+            <h3 style="margin:0;font-size:20px;line-height:1.25;font-weight:700;letter-spacing:-0.01em">Processos ilimitados</h3>
+            <p style="margin:0;font-size:15px;line-height:1.6;color:#4A555E;max-width:34ch;text-wrap:pretty">Processos ilimitados, judiciais, éticos e trabalhistas, inclusos.</p>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:14px">
+            <svg width="42" height="42" viewBox="0 0 24 24" fill="none" stroke="#A04E2C" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" style="flex:0 0 auto">
+              <path d="M20 4H4v12h4v4l5-4h7z"></path>
+            </svg>
+            <h3 style="margin:0;font-size:20px;line-height:1.25;font-weight:700;letter-spacing:-0.01em">Paciente-problema</h3>
+            <p style="margin:0;font-size:15px;line-height:1.6;color:#4A555E;max-width:34ch;text-wrap:pretty">Resolução de paciente-problema antes de virar processo.</p>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:14px">
+            <svg width="42" height="42" viewBox="0 0 24 24" fill="none" stroke="#A04E2C" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" style="flex:0 0 auto">
+              <circle cx="12" cy="12" r="9"></circle>
+              <path d="M3 12h18"></path>
+              <path d="M12 3c3.2 3.4 3.2 14.6 0 18"></path>
+            </svg>
+            <h3 style="margin:0;font-size:20px;line-height:1.25;font-weight:700;letter-spacing:-0.01em">Reputação online</h3>
+            <p style="margin:0;font-size:15px;line-height:1.6;color:#4A555E;max-width:34ch;text-wrap:pretty">Análise de redes sociais e reputação online.</p>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:14px">
+            <svg width="42" height="42" viewBox="0 0 24 24" fill="none" stroke="#A04E2C" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" style="flex:0 0 auto">
+              <circle cx="12" cy="8" r="3.5"></circle>
+              <path d="M5 20c0-3.9 3.1-7 7-7s7 3.1 7 7"></path>
+            </svg>
+            <h3 style="margin:0;font-size:20px;line-height:1.25;font-weight:700;letter-spacing:-0.01em">Advogado de verdade</h3>
+            <p style="margin:0;font-size:15px;line-height:1.6;color:#4A555E;max-width:34ch;text-wrap:pretty">Advogado de verdade te atendendo. Não um chatbot, não um estagiário sozinho.</p>
+          </div>
+        </div>
+        <p style="margin: 0; font-size: clamp(17px,1.6vw,20px); line-height: 1.45; font-weight: 500; color: #0E1720; max-width: 44ch; border-left: 3px solid #A04E2C; padding-left: 18px; text-wrap: pretty; position: static">Cada caso resolvido pelo time vira prevenção pro cliente seguinte.</p>
+
+
+      </div>
+    </section>
+
+
+
+    <section data-screen-label="Jornada 12 meses" style="background:#F7F4EF;padding:clamp(40px,5vw,72px) 0 clamp(56px,7vw,104px)">
+      <div style="max-width:1240px;margin:0 auto clamp(28px,3vw,40px);padding:0 24px">
+        <div style="border-top:1px solid #DED7CC"></div>
+      </div>
+      <div style="max-width:1240px;margin:0 auto;padding:0 24px;display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px;align-items:end">
+        <h2 style="margin:0;font-size:clamp(28px,3.4vw,44px);line-height:1.1;font-weight:700;letter-spacing:-0.015em;max-width:22ch;text-wrap:pretty">O que acontece nos seus 12 meses de assessoria</h2>
+
+      </div>
+
+      <div style="margin-top:clamp(28px,3.5vw,44px);padding:0 24px">
+        <div style="max-width:1240px;margin:0 auto;display:flex;flex-wrap:wrap;align-items:flex-start;justify-content:center;gap:clamp(28px,3vw,40px) clamp(16px,2vw,28px)">
+          <div style="flex:0 1 190px;display:flex;flex-direction:column;align-items:center;gap:14px;text-align:center">
+            <div style="position:relative">
+              <div style="width:88px;height:88px;border-radius:50%;border:1px dashed #C4BAAC;background:#FFFFFF;display:flex;align-items:center;justify-content:center">
+                <svg width="38" height="38" viewBox="0 0 24 24" fill="none" stroke="#A04E2C" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M14 3H6v18h12V7z"></path>
+                  <path d="M14 3v4h4"></path>
+                </svg>
               </div>
-              <span class="play-btn"></span>
+              <span style="position:absolute;right:-6px;bottom:-6px;min-width:30px;height:30px;padding:0 6px;border-radius:50%;background:#0E1720;color:#F7F4EF;font-size:12px;font-weight:700;letter-spacing:0.04em;display:flex;align-items:center;justify-content:center">01</span>
             </div>
+            <h3 style="margin:0;font-size:15px;line-height:1.35;font-weight:700;max-width:20ch;text-wrap:pretty">Revisão dos documentos essenciais da sua clínica</h3>
           </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="stats reveal">
-      <div class="wrap">
-        <div class="stat">
-          <div class="num">1º</div>
-          <div class="label">escritório do Brasil dedicado integralmente ao Direito na estética</div>
-        </div>
-        <div class="stat">
-          <div class="num">+60</div>
-          <div class="label">advogados e especialistas trabalhando pela sua proteção</div>
-        </div>
-        <div class="stat">
-          <div class="num">+600</div>
-          <div class="label">processos acompanhados pelo time em todo o Brasil</div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="section-alt">
-    <div class="wrap">
-      <div class="section-head reveal">
-        <!--<div class="eyebrow">O que as maiores têm em comum</div>-->
-        <h2>Repare nas clínicas que você admira. Elas têm algo em comum.</h2>
-        <p>Crescem sem virar manchete. Não param por causa de um paciente insatisfeito. Não têm sócio brigando publicamente com sócio. Isso vem de um cuidado jurídico que acompanha o negócio todo mês, não de sorte.</p>
-      </div>
-      <div class="pullquote reveal">
-        <p>Só você sabe tudo que passou para construir a sua história.<br>Chegou a hora de protegê-la.</p>
-        <div class="rule"></div>
-      </div>
-    </div>
-  </section>
-
-  <section>
-    <div class="wrap">
-      <div class="section-head reveal">
-        <!--<div class="eyebrow">O que muda na prática</div>-->
-        <h2>O que muda quando você para de correr atrás do problema</h2>
-        <p>Termo assinado resolve o dia em que o processo chega. A assessoria trabalha antes disso: acompanha as resoluções do seu conselho, revisa o que sua equipe posta antes de virar prova contra a clínica, orienta a contratação certa e entra em campo no primeiro sinal de conflito, não só quando o paciente já contratou um advogado.</p>
-      </div>
-
-      <div class="change-grid reveal">
-        <div class="change-item">
-          <div class="n">01</div>
-          <h4>Monitoramento mensal</h4>
-          <p>Um time de +60 pessoas acompanhando a sua clínica todos os meses, sem exceção.</p>
-        </div>
-        <div class="change-item">
-          <div class="n">02</div>
-          <h4>Atualização regulatória</h4>
-          <p>Acompanhamento contínuo das resoluções dos conselhos e da ANVISA, antes que virem exigência.</p>
-        </div>
-        <div class="change-item">
-          <div class="n">03</div>
-          <h4>Processos ilimitados</h4>
-          <p>Judiciais, éticos e trabalhistas — todos inclusos, sem limite de quantidade.</p>
-        </div>
-        <div class="change-item">
-          <div class="n">04</div>
-          <h4>Paciente-problema resolvido antes</h4>
-          <p>Sua clínica protegida antes que o conflito vire processo — e antes que vire manchete.</p>
-        </div>
-        <div class="change-item">
-          <div class="n">05</div>
-          <h4>Reputação monitorada</h4>
-          <p>Análise contínua de redes sociais e reputação online da sua clínica.</p>
-        </div>
-        <div class="change-item">
-          <div class="n">06</div>
-          <h4>Advogado de verdade</h4>
-          <p>Você fala com quem entende do seu negócio — não com chatbot, nem com estagiário sozinho.</p>
-        </div>
-      </div>
-
-      <div class="change-footnote reveal">Cada caso resolvido pelo time vira prevenção pro cliente seguinte.</div>
-    </div>
-  </section>
-
-  <section class="section-alt">
-    <div class="wrap">
-      <div class="section-head reveal">
-        <!--<div class="eyebrow">A jornada dos seus 12 meses</div>-->
-        <h2>O que acontece nos seus 12 meses de assessoria</h2>
-        <p>Cada mês tem uma frente específica da sua clínica sendo trabalhada. Não é atendimento genérico, é uma jornada com data marcada.</p>
-      </div>
-
-      <div class="journey-scroll reveal">
-        <div class="journey-stop">
-          <div class="m">Frente 01</div>
-          <h4>Revisão dos documentos essenciais da sua clínica</h4>
-        </div>
-        <div class="journey-stop">
-          <div class="m">Frente 02</div>
-          <h4>Arquitetura do seu negócio</h4>
-        </div>
-        <div class="journey-stop">
-          <div class="m">Frente 03</div>
-          <h4>Raio-x regulatório</h4>
-        </div>
-        <div class="journey-stop">
-          <div class="m">Frente 04</div>
-          <h4>Mapa de riscos da sua clínica</h4>
-        </div>
-        <div class="journey-stop">
-          <div class="m">Frente 05</div>
-          <h4>Check up trabalhista da sua equipe</h4>
-        </div>
-        <div class="journey-stop">
-          <div class="m">Frente 06</div>
-          <h4>Scanner da sua reputação digital</h4>
-        </div>
-        <div class="journey-stop">
-          <div class="m">Frente 07</div>
-          <h4>Blindagem de imagem e crise</h4>
-        </div>
-        <div class="journey-stop">
-          <div class="m">Frente 08</div>
-          <h4>Revisão de privacidade e proteção de dados</h4>
-        </div>
-        <div class="journey-stop">
-          <div class="m">Frente 09</div>
-          <h4>Prontidão regulatória junto à ANVISA</h4>
-        </div>
-        <div class="journey-stop">
-          <div class="m">Frente 10</div>
-          <h4>Checkpoints periódicos para ajustar o que mudou</h4>
-        </div>
-      </div>
-
-      <div class="included-grid reveal">
-        <div class="included-item">
-          <span class="seal"><svg width="26" height="26" viewBox="0 0 26 26">
-              <circle cx="13" cy="13" r="12" stroke="#C99253" stroke-width="1" />
-              <path d="M8 13.5 L11.5 17 L18.5 9.5" stroke="#E1AB70" stroke-width="1.4" fill="none" />
-            </svg></span>
-          <p>Atendimento ilimitado com time dedicado de advogados especialistas</p>
-        </div>
-        <div class="included-item">
-          <span class="seal"><svg width="26" height="26" viewBox="0 0 26 26">
-              <circle cx="13" cy="13" r="12" stroke="#C99253" stroke-width="1" />
-              <path d="M8 13.5 L11.5 17 L18.5 9.5" stroke="#E1AB70" stroke-width="1.4" fill="none" />
-            </svg></span>
-          <p>Processos judiciais, éticos e trabalhistas sem limite de quantidade</p>
-        </div>
-        <div class="included-item">
-          <span class="seal"><svg width="26" height="26" viewBox="0 0 26 26">
-              <circle cx="13" cy="13" r="12" stroke="#C99253" stroke-width="1" />
-              <path d="M8 13.5 L11.5 17 L18.5 9.5" stroke="#E1AB70" stroke-width="1.4" fill="none" />
-            </svg></span>
-          <p>Orientação antes da decisão, defesa quando o problema aparece</p>
-        </div>
-        <div class="included-item">
-          <span class="seal"><svg width="26" height="26" viewBox="0 0 26 26">
-              <circle cx="13" cy="13" r="12" stroke="#C99253" stroke-width="1" />
-              <path d="M8 13.5 L11.5 17 L18.5 9.5" stroke="#E1AB70" stroke-width="1.4" fill="none" />
-            </svg></span>
-          <p>Resolução de problemas com pacientes</p>
-        </div>
-        <div class="included-item">
-          <span class="seal"><svg width="26" height="26" viewBox="0 0 26 26">
-              <circle cx="13" cy="13" r="12" stroke="#C99253" stroke-width="1" />
-              <path d="M8 13.5 L11.5 17 L18.5 9.5" stroke="#E1AB70" stroke-width="1.4" fill="none" />
-            </svg></span>
-          <p>Suporte para decisões da área trabalhista</p>
-        </div>
-      </div>
-
-      <div class="journey-image img-slot wide reveal">
-        <div class="img-slot-inner">
-          <span class="tag">Espaço para imagem</span>
-          <span class="desc">Colocar foto do escritorio, rolando lado a lado, meio mini carrossel</span>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section>
-    <div class="wrap">
-      <div class="section-head reveal">
-        <!--<div class="eyebrow">A diferença é estrutural</div>-->
-        <h2>Ter um generalista ou ter um time cuidando da clínica</h2>
-      </div>
-
-      <div class="infographic reveal">
-        <div class="info-frame">
-          <div class="info-pill">Advogado generalista</div>
-          <div class="info-item">
-            <h5>Quando atua</h5>
-            <p>Quando você já tem um problema na mão</p>
-          </div>
-          <div class="info-item">
-            <h5>Conhecimento do nicho</h5>
-            <p>Aprende o mercado de estética com você</p>
-          </div>
-          <div class="info-item">
-            <h5>Paciente-problema</h5>
-            <p>Você negocia sozinha até decidir chamar alguém</p>
-          </div>
-          <div class="info-item">
-            <h5>Reputação online</h5>
-            <p>Fora do escopo</p>
-          </div>
-          <div class="info-item">
-            <h5>Atualização regulatória</h5>
-            <p>Você descobre quando já te atingiu</p>
-          </div>
-          <div class="info-item">
-            <h5>Equipe (CLT x PJ)</h5>
-            <p>Cobrado à parte, se oferecido</p>
-          </div>
-          <div class="info-item">
-            <h5>Investimento</h5>
-            <p>Imprevisível, cada caso é uma cobrança nova</p>
-          </div>
-        </div>
-
-        <div class="info-center">
-          <div class="info-center-pill">Comparativo</div>
-        </div>
-
-        <div class="info-frame hl">
-          <div class="info-pill hl">Assessoria Juk Cattani</div>
-          <div class="info-item">
-            <h5>Quando atua</h5>
-            <p>Todos os meses, antes do problema crescer</p>
-          </div>
-          <div class="info-item">
-            <h5>Conhecimento do nicho</h5>
-            <p>Time dedicado à harmonização há mais de 10 anos</p>
-          </div>
-          <div class="info-item">
-            <h5>Paciente-problema</h5>
-            <p>Time entra desde o primeiro sinal de conflito</p>
-          </div>
-          <div class="info-item">
-            <h5>Reputação online</h5>
-            <p>Acompanhamento incluído</p>
-          </div>
-          <div class="info-item">
-            <h5>Atualização regulatória</h5>
-            <p>Time avisa antes da norma começar a valer</p>
-          </div>
-          <div class="info-item">
-            <h5>Equipe (CLT x PJ)</h5>
-            <p>Incluso na orientação contínua</p>
-          </div>
-          <div class="info-item">
-            <h5>Investimento</h5>
-            <p>Previsível, cabe no planejamento todo mês</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section>
-    <div class="wrap">
-      <div class="founder">
-        <div class="founder-photo reveal">
-          <div class="img-slot tall">
-            <div class="img-slot-inner">
-              <span class="tag">Espaço para imagem</span>
-              <span class="desc">Foto do Gui Gui aqui</span>
+          <div style="flex:0 1 190px;display:flex;flex-direction:column;align-items:center;gap:14px;text-align:center">
+            <div style="position:relative">
+              <div style="width:88px;height:88px;border-radius:50%;border:1px dashed #C4BAAC;background:#FFFFFF;display:flex;align-items:center;justify-content:center">
+                <svg width="38" height="38" viewBox="0 0 24 24" fill="none" stroke="#A04E2C" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="4" y="4" width="7" height="7"></rect>
+                  <rect x="13" y="4" width="7" height="7"></rect>
+                  <rect x="4" y="13" width="7" height="7"></rect>
+                </svg>
+              </div>
+              <span style="position:absolute;right:-6px;bottom:-6px;min-width:30px;height:30px;padding:0 6px;border-radius:50%;background:#0E1720;color:#F7F4EF;font-size:12px;font-weight:700;letter-spacing:0.04em;display:flex;align-items:center;justify-content:center">02</span>
             </div>
+            <h3 style="margin:0;font-size:15px;line-height:1.35;font-weight:700;max-width:20ch;text-wrap:pretty">Arquitetura do seu negócio</h3>
           </div>
-          <!--<div class="founder-badge b2"><span class="fb-icon">✓</span> +10 anos de atuação</div>
-          <div class="founder-badge b3"><span class="fb-icon">◎</span> Autor de 8 obras jurídicas</div>-->
-        </div>
-        <div class="reveal">
-          <div class="faq-badge"><span class="dot"></span> Quem lidera</div>
-          <h3 class="founder-name">Guilherme Juk Cattani</h3>
-          <div class="founder-role">OAB/SC 5.368</div>
-          <p class="bio">Poucos profissionais entendem tão profundamente os bastidores jurídicos, comerciais e regulatórios da harmonização quanto Guilherme Cattani. Advogado especialista em Direito Médico Hospitalar e Direito Tributário, mestre em Gestão de Políticas Públicas, professor e empresário do setor da saúde e estética, é fundador da Juk Cattani e da Academia da Independência.</p>
-          <p class="bio">Reconhecido como o primeiro advogado focado em harmonização facial do Brasil, é autor do primeiro livro de Direito na harmonização do país, coautor de outras 7 obras de estética facial e corporal e uma das vozes mais atuantes na defesa, orientação e valorização dos profissionais da área.</p>
-          <div class="founder-social">
-            <a href="https://www.instagram.com/jukcattaniadvogados/" aria-label="Instagram">ig</a>
-            <a href="https://www.facebook.com/jukcattani.advogados" aria-label="Facebook">f</a>
-            <a href="https://api.whatsapp.com/send?phone=5547996941734" aria-label="WhatsApp">wa</a>
+          <div style="flex:0 1 190px;display:flex;flex-direction:column;align-items:center;gap:14px;text-align:center">
+            <div style="position:relative">
+              <div style="width:88px;height:88px;border-radius:50%;border:1px dashed #C4BAAC;background:#FFFFFF;display:flex;align-items:center;justify-content:center">
+                <svg width="38" height="38" viewBox="0 0 24 24" fill="none" stroke="#A04E2C" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="11" cy="11" r="6"></circle>
+                  <path d="M20 20l-4.5-4.5"></path>
+                </svg>
+              </div>
+              <span style="position:absolute;right:-6px;bottom:-6px;min-width:30px;height:30px;padding:0 6px;border-radius:50%;background:#0E1720;color:#F7F4EF;font-size:12px;font-weight:700;letter-spacing:0.04em;display:flex;align-items:center;justify-content:center">03</span>
+            </div>
+            <h3 style="margin:0;font-size:15px;line-height:1.35;font-weight:700;max-width:20ch;text-wrap:pretty">Raio-x regulatório</h3>
+          </div>
+          <div style="flex:0 1 190px;display:flex;flex-direction:column;align-items:center;gap:14px;text-align:center">
+            <div style="position:relative">
+              <div style="width:88px;height:88px;border-radius:50%;border:1px dashed #C4BAAC;background:#FFFFFF;display:flex;align-items:center;justify-content:center">
+                <svg width="38" height="38" viewBox="0 0 24 24" fill="none" stroke="#A04E2C" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 3l9 16H3z"></path>
+                  <path d="M12 10v4"></path>
+                </svg>
+              </div>
+              <span style="position:absolute;right:-6px;bottom:-6px;min-width:30px;height:30px;padding:0 6px;border-radius:50%;background:#0E1720;color:#F7F4EF;font-size:12px;font-weight:700;letter-spacing:0.04em;display:flex;align-items:center;justify-content:center">04</span>
+            </div>
+            <h3 style="margin:0;font-size:15px;line-height:1.35;font-weight:700;max-width:20ch;text-wrap:pretty">Mapa de riscos da sua clínica</h3>
+          </div>
+          <div style="flex:0 1 190px;display:flex;flex-direction:column;align-items:center;gap:14px;text-align:center">
+            <div style="position:relative">
+              <div style="width:88px;height:88px;border-radius:50%;border:1px dashed #C4BAAC;background:#FFFFFF;display:flex;align-items:center;justify-content:center">
+                <svg width="38" height="38" viewBox="0 0 24 24" fill="none" stroke="#A04E2C" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="3" y="7" width="18" height="13" rx="2"></rect>
+                  <path d="M9 7V5h6v2"></path>
+                </svg>
+              </div>
+              <span style="position:absolute;right:-6px;bottom:-6px;min-width:30px;height:30px;padding:0 6px;border-radius:50%;background:#0E1720;color:#F7F4EF;font-size:12px;font-weight:700;letter-spacing:0.04em;display:flex;align-items:center;justify-content:center">05</span>
+            </div>
+            <h3 style="margin:0;font-size:15px;line-height:1.35;font-weight:700;max-width:20ch;text-wrap:pretty">Check up trabalhista da sua equipe</h3>
+          </div>
+          <div style="flex:0 1 190px;display:flex;flex-direction:column;align-items:center;gap:14px;text-align:center">
+            <div style="position:relative">
+              <div style="width:88px;height:88px;border-radius:50%;border:1px dashed #C4BAAC;background:#FFFFFF;display:flex;align-items:center;justify-content:center">
+                <svg width="38" height="38" viewBox="0 0 24 24" fill="none" stroke="#A04E2C" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="12" cy="12" r="9"></circle>
+                  <path d="M3 12h18"></path>
+                  <path d="M12 3c3.2 3.4 3.2 14.6 0 18"></path>
+                </svg>
+              </div>
+              <span style="position:absolute;right:-6px;bottom:-6px;min-width:30px;height:30px;padding:0 6px;border-radius:50%;background:#0E1720;color:#F7F4EF;font-size:12px;font-weight:700;letter-spacing:0.04em;display:flex;align-items:center;justify-content:center">06</span>
+            </div>
+            <h3 style="margin:0;font-size:15px;line-height:1.35;font-weight:700;max-width:20ch;text-wrap:pretty">Scanner da sua reputação digital</h3>
+          </div>
+          <div style="flex:0 1 190px;display:flex;flex-direction:column;align-items:center;gap:14px;text-align:center">
+            <div style="position:relative">
+              <div style="width:88px;height:88px;border-radius:50%;border:1px dashed #C4BAAC;background:#FFFFFF;display:flex;align-items:center;justify-content:center">
+                <svg width="38" height="38" viewBox="0 0 24 24" fill="none" stroke="#A04E2C" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 3l8 3v6c0 5-4 8-8 9-4-1-8-4-8-9V6z"></path>
+                </svg>
+              </div>
+              <span style="position:absolute;right:-6px;bottom:-6px;min-width:30px;height:30px;padding:0 6px;border-radius:50%;background:#0E1720;color:#F7F4EF;font-size:12px;font-weight:700;letter-spacing:0.04em;display:flex;align-items:center;justify-content:center">07</span>
+            </div>
+            <h3 style="margin:0;font-size:15px;line-height:1.35;font-weight:700;max-width:20ch;text-wrap:pretty">Blindagem de imagem e crise</h3>
+          </div>
+          <div style="flex:0 1 190px;display:flex;flex-direction:column;align-items:center;gap:14px;text-align:center">
+            <div style="position:relative">
+              <div style="width:88px;height:88px;border-radius:50%;border:1px dashed #C4BAAC;background:#FFFFFF;display:flex;align-items:center;justify-content:center">
+                <svg width="38" height="38" viewBox="0 0 24 24" fill="none" stroke="#A04E2C" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="5" y="10" width="14" height="10" rx="2"></rect>
+                  <path d="M8 10V7a4 4 0 018 0v3"></path>
+                </svg>
+              </div>
+              <span style="position:absolute;right:-6px;bottom:-6px;min-width:30px;height:30px;padding:0 6px;border-radius:50%;background:#0E1720;color:#F7F4EF;font-size:12px;font-weight:700;letter-spacing:0.04em;display:flex;align-items:center;justify-content:center">08</span>
+            </div>
+            <h3 style="margin:0;font-size:15px;line-height:1.35;font-weight:700;max-width:20ch;text-wrap:pretty">Revisão de privacidade e proteção de dados</h3>
+          </div>
+          <div style="flex:0 1 190px;display:flex;flex-direction:column;align-items:center;gap:14px;text-align:center">
+            <div style="position:relative">
+              <div style="width:88px;height:88px;border-radius:50%;border:1px dashed #C4BAAC;background:#FFFFFF;display:flex;align-items:center;justify-content:center">
+                <svg width="38" height="38" viewBox="0 0 24 24" fill="none" stroke="#A04E2C" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="12" cy="12" r="9"></circle>
+                  <path d="M12 8v8M8 12h8"></path>
+                </svg>
+              </div>
+              <span style="position:absolute;right:-6px;bottom:-6px;min-width:30px;height:30px;padding:0 6px;border-radius:50%;background:#0E1720;color:#F7F4EF;font-size:12px;font-weight:700;letter-spacing:0.04em;display:flex;align-items:center;justify-content:center">09</span>
+            </div>
+            <h3 style="margin:0;font-size:15px;line-height:1.35;font-weight:700;max-width:20ch;text-wrap:pretty">Prontidão regulatória junto à ANVISA</h3>
+          </div>
+          <div style="flex:0 1 190px;display:flex;flex-direction:column;align-items:center;gap:14px;text-align:center">
+            <div style="position:relative">
+              <div style="width:88px;height:88px;border-radius:50%;border:1px dashed #A04E2C;background:#A04E2C;display:flex;align-items:center;justify-content:center">
+                <svg width="38" height="38" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M20 12a8 8 0 11-2.4-5.7"></path>
+                  <path d="M20 4v4h-4"></path>
+                </svg>
+              </div>
+              <span style="position:absolute;right:-6px;bottom:-6px;min-width:30px;height:30px;padding:0 6px;border-radius:50%;background:#0E1720;color:#F7F4EF;font-size:12px;font-weight:700;letter-spacing:0.04em;display:flex;align-items:center;justify-content:center">10</span>
+            </div>
+            <h3 style="margin:0;font-size:15px;line-height:1.35;font-weight:700;max-width:20ch;text-wrap:pretty">Checkpoints periódicos para ajustar o que mudou na sua clínica</h3>
           </div>
         </div>
       </div>
-    </div>
-  </section>
 
-  <section>
-    <div class="wrap">
-      <div class="faq-layout">
-        <div class="faq-side reveal">
-          <div class="faq-badge"><span class="dot"></span> Dúvidas frequentes</div>
-          <h2>Antes de fechar, <em>tire suas dúvidas</em></h2>
-          <a href="https://api.whatsapp.com/send?phone=5547996941734&text=Ol%C3%A1%20equipe%20Juk%20Cattani%2C%20ainda%20tenho%20d%C3%BAvidas%20sobre%20a%20assessoria" class="faq-support-card">
-            <div class="faq-support-avatar">GC</div>
-            <div class="faq-support-text">
-              <span class="fsc-title">Ainda restou dúvidas?</span>
-              <span class="fsc-sub">Fale com nosso time</span>
-            </div>
-          </a>
+    </section>
+
+    <section data-screen-label="Por dentro do escritório" style="background:#F7F4EF;padding:clamp(40px,5vw,72px) 24px clamp(56px,7vw,104px)">
+      <div style="max-width:1240px;margin:0 auto;border-top:1px solid #DED7CC;padding-top:clamp(28px,3vw,40px);display:flex;flex-direction:column;gap:clamp(28px,3.5vw,44px)">
+        <div style="display:flex;flex-direction:column;align-items:center;gap:16px;text-align:center;max-width:660px;margin:0 auto">
+          <span style="font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:#8F4526">Por dentro do escritório</span>
+          <h2 style="margin:0;font-size:clamp(30px,3.6vw,46px);line-height:1.08;font-weight:700;letter-spacing:-0.015em;text-wrap:pretty">Não é um advogado. É uma estrutura.</h2>
         </div>
 
-        <div class="faq reveal" id="faqList">
-          <div class="faq-item">
-            <button class="faq-q"><span>Já tenho advogado, por que trocar?</span><span class="faq-icon"></span></button>
-            <div class="faq-a">
-              <p>Advogado generalista sabe leis. Advogado especializado sabe estética, conhece as resoluções do seu conselho, da Vigilância Sanitária, e já viu dezenas de casos parecidos com o seu. As clínicas que crescem mais rápido têm um time que entende do mercado tanto quanto elas mesmas.</p>
-            </div>
-          </div>
-          <div class="faq-item">
-            <button class="faq-q"><span>Meus pacientes são de confiança, nunca tive problema.</span><span class="faq-icon"></span></button>
-            <div class="faq-a">
-              <p>Os processos mais comuns não começam com má-fé. Começam com um resultado abaixo da expectativa, um print tirado de contexto, uma avaliação no Google. A Juk identifica esses sinais e resolve antes que virem notícia manchando a sua reputação.</p>
-            </div>
-          </div>
-          <div class="faq-item">
-            <button class="faq-q"><span>A assessoria pesa no meu orçamento agora.</span><span class="faq-icon"></span></button>
-            <div class="faq-a">
-              <p>Uma única indenização por resultado estético gira entre R$ 30 mil e R$ 200 mil. Uma exposição pública custa anos de reputação. A assessoria existe para essa conta nunca chegar até você.</p>
-            </div>
-          </div>
-          <div class="faq-item">
-            <button class="faq-q"><span>Vai ser um processo burocrático pra começar?</span><span class="faq-icon"></span></button>
-            <div class="faq-a">
-              <p>Não vai. A assessoria começa a partir das informações que você já tem sobre sua clínica, procedimentos e equipe. O time se organiza, você continua atendendo.</p>
-            </div>
-          </div>
-          <div class="faq-item">
-            <button class="faq-q"><span>O mercado está mais regulado, mas ainda não me atingiu.</span><span class="faq-icon"></span></button>
-            <div class="faq-a">
-              <p>A fiscalização não avisa. O PL 1027/2025, as resoluções recentes dos conselhos e as operações da ANVISA mostram que o ciclo de regulação está acelerado. Quem já tem esse cuidado sabe da mudança antes dela virar exigência.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="final-cta" id="cta">
-    <div class="wrap">
-      <div class="card">
-        <div class="cta-badge reveal"><span class="dot"></span> Sua proteção começa aqui</div>
-        <h2 class="reveal">Sua clínica já chegou lá. Falta ela ser <span class="hl">protegida como as maiores são</span>.</h2>
-        <p class="reveal">O cuidado jurídico contínuo que sustenta as clínicas mais respeitadas da harmonização, pelo time que mais entende de estética no Brasil.</p>
-        <a href="https://api.whatsapp.com/send?phone=5547996941734&text=Ol%C3%A1%20equipe%20Juk%20Cattani%2C%20vim%20pela%20p%C3%A1gina%20de%20assessoria%20e%20gostaria%20de%20receber%20um%20atendimento%20personalizado" class="btn reveal">Quero fazer parte desse padrão →</a>
-        <div class="fine reveal">Juk Cattani · Assessoria Jurídica — faça parte do time dos negócios mais valiosos da harmonização</div>
-      </div>
-    </div>
-  </section>
-
-  <footer>
-    <div class="wrap">
-      <div class="foot-top">
         <div>
-          <a href="https://jukcattani.com.br" class="logo">JUK<span>·</span>CATTANI</a>
-          <p class="foot-tagline">Referência nacional em advocacia especializada no mercado da harmonização.</p>
-          <div class="foot-social">
-            <a href="https://www.facebook.com/jukcattani.advogados" aria-label="Facebook">f</a>
-            <a href="https://www.linkedin.com/company/juk-cattani-sociedade-de-advogados" aria-label="LinkedIn">in</a>
-            <a href="https://www.instagram.com/jukcattaniadvogados/" aria-label="Instagram">ig</a>
-            <a href="https://wa.link/mj95vo" aria-label="WhatsApp">wa</a>
+          <div id="galeria-escritorio">
+            <div>
+              <figure data-f="larga" style="flex:1.778 1 356px;aspect-ratio:16/9">
+                <img src="uploads/time-marca-recepcao.webp" alt="Equipe do Juk Cattani Advogados na recepção do escritório, diante do letreiro da marca" loading="lazy">
+              </figure>
+              <figure data-f="alta" style="flex:0.667 1 133px;aspect-ratio:2/3">
+                <img src="uploads/treinamento-clinicas.webp" alt="Treinamento do escritório sobre atualização regulatória, com a sala cheia de profissionais" loading="lazy">
+              </figure>
+              <figure data-f="alta" style="flex:0.75 1 150px;aspect-ratio:3/4">
+                <img src="uploads/advogada-atendimento.webp" alt="Advogada do time em atendimento por videochamada a uma clínica" loading="lazy">
+              </figure>
+            </div>
+            <div>
+              <figure data-f="alta" style="flex:0.667 1 133px;aspect-ratio:2/3">
+                <img src="uploads/time-trabalhando-escritorio.webp" alt="Advogadas do time Juk Cattani analisando um caso juntas no escritório" loading="lazy" style="object-position:50% 38%">
+              </figure>
+              <figure data-f="larga" style="flex:1.778 1 356px;aspect-ratio:16/9">
+                <img src="uploads/escritorio-open-space.webp" alt="Equipe do escritório trabalhando no open space da sede" loading="lazy">
+              </figure>
+              <figure data-f="alta" style="flex:0.75 1 150px;aspect-ratio:3/4">
+                <img src="uploads/congresso-setor.webp" alt="Palestra do escritório em congresso do setor, auditório lotado de profissionais" loading="lazy">
+              </figure>
+            </div>
+            <div>
+              <figure data-f="larga" style="flex:1.333 1 267px;aspect-ratio:4/3">
+                <img src="uploads/time-reuniao-analise.webp" alt="Guilherme Juk Cattani e o time em reunião de análise de caso" loading="lazy" style="object-position:50% 45%">
+              </figure>
+              <figure data-f="larga" style="flex:1.778 1 356px;aspect-ratio:16/9">
+                <img src="uploads/escritorio-sala.webp" alt="Sala de atendimento da sede do escritório em Balneário Camboriú" loading="lazy">
+              </figure>
+            </div>
+          </div>
+          <p style="margin:clamp(16px,1.8vw,22px) 0 0;text-align:center;font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:11px;line-height:1.6;letter-spacing:0.1em;text-transform:uppercase;color:#6B6055;text-wrap:pretty">Quem executa a jornada · <b style="color:#8F4526;font-weight:700">+60 advogados e especialistas dedicados à harmonização</b></p>
+        </div>
+      </div>
+    </section>
+
+    <section id="comparativo" data-screen-label="Comparativo" style="position:relative;background:#0E1720;color:#F7F4EF;padding:0;overflow:hidden;border-bottom:4px solid #A04E2C">
+      <div style="position:relative;min-height:clamp(480px,64vh,680px);display:flex;align-items:center;justify-content:center">
+        <img src="uploads/DSC_8558.webp" alt="Guilherme Juk Cattani com o time do escritório em evento do setor" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 45%;display:block" />
+        <div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(14,23,32,0.6) 0%,rgba(14,23,32,0.84) 100%)"></div>
+        <div style="position:relative;max-width:900px;padding:clamp(64px,8vw,104px) 24px;display:flex;flex-direction:column;align-items:center;gap:clamp(22px,2.6vw,32px);text-align:center">
+          <span style="font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:#E8C0AB">Generalista x Assessoria Juk Cattani</span>
+          <h2 style="margin:0;font-size:clamp(28px,3.6vw,48px);line-height:1.08;font-weight:700;letter-spacing:-0.02em;max-width:26ch;text-wrap:pretty">A diferença entre ter um generalista e ter um time cuidando da clínica.</h2>
+          <p style="margin:0;font-size:clamp(18px,1.9vw,24px);line-height:1.4;color:#F7F4EF;max-width:40ch;text-wrap:pretty">Advogado avulso entra quando o problema já está na sua mão. O time entra todos os meses, antes dele crescer.</p>
+
+        </div>
+      </div>
+    </section>
+
+    <section data-screen-label="O que ouvimos das clínicas" style="background:#F7F4EF;padding:clamp(56px,7vw,104px) 24px">
+      <div style="max-width:1240px;margin:0 auto;display:flex;flex-direction:column;gap:clamp(32px,4vw,52px);align-items:center">
+        <div style="display:flex;flex-direction:column;align-items:center;gap:16px;text-align:center;max-width:660px">
+          <span style="font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:#8F4526">Na prática</span>
+          <h2 style="margin:0;font-size:clamp(30px,3.6vw,46px);line-height:1.08;font-weight:700;letter-spacing:-0.015em;text-wrap:pretty">O que ouvimos das clínicas</h2>
+          <p style="margin:0;font-size:clamp(16px,1.4vw,18px);line-height:1.6;color:#4A555E;max-width:56ch;text-wrap:pretty">Falas que se repetem nas reuniões e nos atendimentos do dia a dia, o retrato de como a insegurança jurídica pesa muito antes de virar processo.</p>
+        </div>
+
+        <div style="width:100%;display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:clamp(14px,1.6vw,20px)">
+          <figure style="margin:0;background:#FFFFFF;border:1px solid #E4DED4;border-radius:4px;padding:clamp(24px,2.2vw,32px);display:flex;flex-direction:column;gap:16px;box-shadow:0 1px 2px rgba(14,23,32,0.05)">
+            <span aria-hidden="true" style="display:block;font-size:40px;line-height:0.6;font-weight:900;color:#A04E2C">&ldquo;</span>
+            <blockquote style="margin:0;font-size:clamp(16px,1.35vw,18px);line-height:1.55;font-weight:400;color:#0E1720;text-wrap:pretty">Você não precisa se desgastar sozinha com paciente insatisfeito. Alguém pode assumir essa conversa por você.</blockquote>
+          </figure>
+          <figure style="margin:0;background:#FFFFFF;border:1px solid #E4DED4;border-radius:4px;padding:clamp(24px,2.2vw,32px);display:flex;flex-direction:column;gap:16px;box-shadow:0 1px 2px rgba(14,23,32,0.05)">
+            <span aria-hidden="true" style="display:block;font-size:40px;line-height:0.6;font-weight:900;color:#A04E2C">&ldquo;</span>
+            <blockquote style="margin:0;font-size:clamp(16px,1.35vw,18px);line-height:1.55;font-weight:400;color:#0E1720;text-wrap:pretty">Sem respaldo jurídico, é fácil ceder à pressão de um paciente insatisfeito, mesmo sabendo que você fez certo.</blockquote>
+          </figure>
+          <figure style="margin:0;background:#FFFFFF;border:1px solid #E4DED4;border-radius:4px;padding:clamp(24px,2.2vw,32px);display:flex;flex-direction:column;gap:16px;box-shadow:0 1px 2px rgba(14,23,32,0.05)">
+            <span aria-hidden="true" style="display:block;font-size:40px;line-height:0.6;font-weight:900;color:#A04E2C">&ldquo;</span>
+            <blockquote style="margin:0;font-size:clamp(16px,1.35vw,18px);line-height:1.55;font-weight:400;color:#0E1720;text-wrap:pretty">A estética ainda luta por credibilidade. Ter uma assessoria jurídica por trás muda como você é vista, e principalmente como você se sente.</blockquote>
+          </figure>
+          <figure style="margin:0;background:#FFFFFF;border:1px solid #E4DED4;border-radius:4px;padding:clamp(24px,2.2vw,32px);display:flex;flex-direction:column;gap:16px;box-shadow:0 1px 2px rgba(14,23,32,0.05)">
+            <span aria-hidden="true" style="display:block;font-size:40px;line-height:0.6;font-weight:900;color:#A04E2C">&ldquo;</span>
+            <blockquote style="margin:0;font-size:clamp(16px,1.35vw,18px);line-height:1.55;font-weight:400;color:#0E1720;text-wrap:pretty">Você não precisa carregar sozinha a ansiedade de um processo em aberto.</blockquote>
+          </figure>
+          <figure style="margin:0;background:#FFFFFF;border:1px solid #E4DED4;border-radius:4px;padding:clamp(24px,2.2vw,32px);display:flex;flex-direction:column;gap:16px;box-shadow:0 1px 2px rgba(14,23,32,0.05)">
+            <span aria-hidden="true" style="display:block;font-size:40px;line-height:0.6;font-weight:900;color:#A04E2C">&ldquo;</span>
+            <blockquote style="margin:0;font-size:clamp(16px,1.35vw,18px);line-height:1.55;font-weight:400;color:#0E1720;text-wrap:pretty">Insegurança regulatória não se resolve sozinha, e quanto mais tempo passa, mais ela pesa.</blockquote>
+          </figure>
+          <figure style="margin:0;background:#FFFFFF;border:1px solid #E4DED4;border-radius:4px;padding:clamp(24px,2.2vw,32px);display:flex;flex-direction:column;gap:16px;box-shadow:0 1px 2px rgba(14,23,32,0.05)">
+            <span aria-hidden="true" style="display:block;font-size:40px;line-height:0.6;font-weight:900;color:#A04E2C">&ldquo;</span>
+            <blockquote style="margin:0;font-size:clamp(16px,1.35vw,18px);line-height:1.55;font-weight:400;color:#0E1720;text-wrap:pretty">Quando o processo chega, o abalo é imediato. É nesse momento que você precisa de alguém do seu lado, não de um documento guardado na gaveta.</blockquote>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section data-screen-label="Fundador" style="background:#F7F4EF;padding:clamp(40px,5vw,72px) 24px clamp(56px,7vw,104px)">
+      <div style="max-width:1240px;margin:0 auto;border-top:1px solid #DED7CC;padding-top:clamp(28px,3vw,40px);display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:clamp(28px,4vw,56px);align-items:start">
+        <div style="min-width:0;display:flex;flex-direction:column;gap:14px">
+          <div style="position:relative;aspect-ratio:4/5;border-radius:4px;overflow:hidden;background:#16232E">
+            <img src="uploads/v2_fb790d5a-7712-4f4c-9c4f-3c6035caa372.webp" alt="Guilherme Juk Cattani palestrando em congresso do setor" style="width:100%;height:100%;object-fit:cover;object-position:50% 22%;display:block">
           </div>
         </div>
-        <div>
-          <h5>Links úteis</h5>
-          <ul class="foot-links">
-            <li><a href="https://jukcattani.com.br">Página inicial</a></li>
-            <li><a href="https://jukcattani.com.br/#sobre">Sobre nós</a></li>
-            <li><a href="https://jukcattani.com.br/#servicos">Nossos serviços</a></li>
-            <li><a href="https://jukcattani.com.br/blog/">Blog</a></li>
-          </ul>
-        </div>
-        <div>
-          <h5>Informações de contato</h5>
-          <ul class="foot-links">
-            <li><a href="https://api.whatsapp.com/send?phone=5547996941734">47 99694-1734</a></li>
-            <li><a href="#">contato@jukcattani.com.br</a></li>
-            <li><a href="#">R. 1301, 471, Edifício Top Class Corporate, 23° Andar — Centro, Balneário Camboriú - SC</a></li>
-          </ul>
+        <div style="min-width:0;display:flex;flex-direction:column;gap:20px">
+          <span style="font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:#8F4526">Fundador</span>
+          <div style="display:flex;flex-direction:column;gap:6px">
+            <h2 style="margin:0;font-size:clamp(28px,3.2vw,40px);line-height:1.1;font-weight:700;letter-spacing:-0.015em">Guilherme Juk Cattani</h2>
+          </div>
+          <p style="margin:0;font-size:clamp(16px,1.4vw,18px);line-height:1.65;color:#4A555E;max-width:56ch;text-wrap:pretty">Poucos profissionais entendem tão profundamente os bastidores jurídicos, comerciais e regulatórios da harmonização quanto Guilherme Cattani.</p>
+          <p style="margin:0;font-size:clamp(16px,1.4vw,18px);line-height:1.65;color:#4A555E;max-width:56ch;text-wrap:pretty">Advogado especialista em Direito Médico Hospitalar e Direito Tributário, mestre em Gestão de Políticas Públicas, professor e empresário do setor da saúde e estética, Guilherme é fundador da Juk Cattani e da Academia da Independência.</p>
+          <p style="margin:0;font-size:clamp(16px,1.4vw,18px);line-height:1.65;color:#4A555E;max-width:56ch;text-wrap:pretty">Reconhecido como o primeiro advogado focado em harmonização facial do Brasil, é autor do primeiro livro de Direito na harmonização do país, coautor de outras 7 obras de estética facial e corporal e uma das vozes mais atuantes na defesa, orientação e valorização dos profissionais da área.</p>
+          <p style="margin:0;font-size:clamp(17px,1.6vw,20px);line-height:1.45;font-weight:500;color:#0E1720;max-width:44ch;border-left:3px solid #A04E2C;padding-left:18px;text-wrap:pretty">As clínicas que ele acompanha já não precisam de socorro. Precisam de alguém olhando pra frente com elas.</p>
+          <div style="display:flex;flex-wrap:wrap;gap:10px">
+            <a href="https://www.instagram.com/jukcattaniadvogados/" style="display:inline-flex;align-items:center;min-height:44px;padding:12px 18px;border:1px solid #DED7CC;border-radius:3px;font-size:14px;color:#0E1720" class="hv-1">Instagram</a>
+
+
+          </div>
         </div>
       </div>
-      <div class="foot-bottom">
-        <div class="foot-meta">Assessoria Jurídica para a estética · Todos os direitos reservados</div>
-        <div class="foot-meta">Copyright 2026 Juk Cattani</div>
+    </section>
+
+    <section data-screen-label="FAQ" style="background:#F7F4EF;padding:clamp(40px,5vw,72px) 24px clamp(56px,7vw,104px)">
+      <div style="max-width:1240px;margin:0 auto;border-top:1px solid #DED7CC;padding-top:clamp(28px,3vw,40px);display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:clamp(28px,4vw,56px);align-items:start">
+        <div style="min-width:0;display:flex;flex-direction:column;gap:18px">
+          <span style="font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:#8F4526">Dúvidas frequentes</span>
+          <h2 style="margin:0;font-size:clamp(28px,3.2vw,40px);line-height:1.1;font-weight:700;letter-spacing:-0.015em;max-width:20ch;text-wrap:pretty">O que fica no caminho antes de fechar</h2>
+          <a href="https://api.whatsapp.com/send?phone=5547996941734&amp;text=Ol%C3%A1%20equipe%20Juk%20Cattani%2C%20vim%20pela%20p%C3%A1gina%20de%20assessoria%20e%20gostaria%20de%20receber%20um%20atendimento%20personalizado" style="display:inline-flex;align-items:center;justify-content:center;background:#0E1720;color:#F7F4EF;font-size:15px;font-weight:500;padding:15px 24px;border-radius:3px;min-height:50px;align-self:flex-start" class="hv-2">Falar com o time agora</a>
+        </div>
+
+        <div style="min-width:0;display:flex;flex-direction:column;gap:1px;background:#DED7CC;border-top:1px solid #DED7CC;border-bottom:1px solid #DED7CC">
+          <details open style="background:#F7F4EF;padding:20px 0">
+            <summary style="cursor:pointer;list-style:none;font-size:clamp(17px,1.6vw,20px);font-weight:500;line-height:1.35;color:#0E1720;text-wrap:pretty">Já tenho advogado, por que trocar?</summary>
+            <p style="margin:14px 0 0;font-size:15px;line-height:1.65;color:#4A555E;max-width:60ch;text-wrap:pretty">Advogado generalista sabe leis. Advogado especializado sabe estética, conhece as resoluções do seu conselho, da Vigilância Sanitária e já viu dezenas de casos parecidos com o seu. As clínicas que crescem mais rápido têm um time que entende do mercado tanto quanto elas mesmas.</p>
+          </details>
+          <details style="background:#F7F4EF;padding:20px 0">
+            <summary style="cursor:pointer;list-style:none;font-size:clamp(17px,1.6vw,20px);font-weight:500;line-height:1.35;color:#0E1720;text-wrap:pretty">Meus pacientes são de confiança, nunca tive problema.</summary>
+            <p style="margin:14px 0 0;font-size:15px;line-height:1.65;color:#4A555E;max-width:60ch;text-wrap:pretty">Os processos mais comuns não começam com má-fé. Começam com um resultado abaixo da expectativa, um print tirado de contexto, uma avaliação no Google. A Juk identifica esses sinais e resolve antes que virem notícia manchando a sua reputação.</p>
+          </details>
+          <details style="background:#F7F4EF;padding:20px 0">
+            <summary style="cursor:pointer;list-style:none;font-size:clamp(17px,1.6vw,20px);font-weight:500;line-height:1.35;color:#0E1720;text-wrap:pretty">A Assessoria pesa no meu orçamento agora.</summary>
+            <p style="margin:14px 0 0;font-size:15px;line-height:1.65;color:#4A555E;max-width:60ch;text-wrap:pretty">Uma única indenização por resultado estético gira entre R$ 30 mil e R$ 200 mil. Uma exposição pública custa anos de reputação. A assessoria existe para essa conta nunca chegar até você.</p>
+          </details>
+          <details style="background:#F7F4EF;padding:20px 0">
+            <summary style="cursor:pointer;list-style:none;font-size:clamp(17px,1.6vw,20px);font-weight:500;line-height:1.35;color:#0E1720;text-wrap:pretty">Vai ser um processo burocrático pra começar?</summary>
+            <p style="margin:14px 0 0;font-size:15px;line-height:1.65;color:#4A555E;max-width:60ch;text-wrap:pretty">Não vai. A assessoria começa a partir das informações que você já tem sobre sua clínica, procedimentos e equipe. O time se organiza, você continua atendendo.</p>
+          </details>
+          <details style="background:#F7F4EF;padding:20px 0">
+            <summary style="cursor:pointer;list-style:none;font-size:clamp(17px,1.6vw,20px);font-weight:500;line-height:1.35;color:#0E1720;text-wrap:pretty">O mercado está mais regulado, mas ainda não me atingiu.</summary>
+            <p style="margin:14px 0 0;font-size:15px;line-height:1.65;color:#4A555E;max-width:60ch;text-wrap:pretty">A fiscalização não avisa. O PL 1027/2025, as resoluções recentes dos conselhos e as operações da ANVISA mostram que o ciclo de regulação está acelerado. Quem já tem esse cuidado sabe da mudança antes dela virar exigência.</p>
+          </details>
+        </div>
       </div>
-    </div>
-  </footer>
+    </section>
+
+    <section data-screen-label="CTA final" style="background:#0E1720;color:#F7F4EF;padding:clamp(56px,7vw,104px) 24px">
+      <div style="max-width:1240px;margin:0 auto;display:flex;justify-content:center">
+        <div style="min-width:0;max-width:780px;display:flex;flex-direction:column;align-items:center;text-align:center;gap:24px">
+          <span style="font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:#C97650">Juk Cattani · Assessoria Jurídica</span>
+          <h2 style="margin:0;font-size:clamp(30px,3.8vw,50px);line-height:1.08;font-weight:900;letter-spacing:-0.02em;max-width:24ch;text-wrap:pretty">Sua clínica já chegou lá. Falta ela ser protegida como as maiores são.</h2>
+          <p style="margin:0;font-size:clamp(16px,1.4vw,18px);line-height:1.6;color:#C3CDD4;max-width:48ch;text-wrap:pretty">O cuidado jurídico contínuo que sustenta as clínicas mais respeitadas da harmonização, pelo time que mais entende de estética no Brasil.</p>
+          <p style="margin:0;font-size:clamp(17px,1.6vw,20px);line-height:1.45;font-weight:500;color:#F7F4EF;max-width:36ch;text-wrap:pretty">Faça parte do time dos negócios mais valiosos da harmonização.</p>
+          <div style="display:flex;flex-wrap:wrap;gap:12px;align-items:center;justify-content:center">
+            <a href="https://api.whatsapp.com/send?phone=5547996941734&amp;text=Ol%C3%A1%20equipe%20Juk%20Cattani%2C%20vim%20pela%20p%C3%A1gina%20de%20assessoria%20e%20gostaria%20de%20receber%20um%20atendimento%20personalizado" style="display:inline-flex;align-items:center;justify-content:center;background:#A04E2C;color:#FFFFFF;font-size:16px;font-weight:500;padding:17px 30px;border-radius:3px;min-height:54px" class="hv-3">Quero proteger a minha clínica</a>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer style="background:#0E1720;color:#C3CDD4;padding:clamp(40px,5vw,64px) 24px;border-top:1px solid rgba(247,244,239,0.12)">
+      <div style="max-width:1240px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:clamp(24px,3vw,48px)">
+        <div style="display:flex;flex-direction:column;gap:12px">
+          <a href="https://jukcattani.com.br" aria-label="Juk Cattani — Sociedade de Advogados" style="display:inline-block;line-height:0"><img src="uploads/logo-juk-cattani-branco.png" alt="Juk Cattani — Sociedade de Advogados" width="520" height="127" style="width:clamp(180px,16vw,215px);height:auto;display:block"></a>
+          <p style="margin:0;font-size:14px;line-height:1.6;max-width:34ch">Referência nacional em advocacia especializada no mercado da harmonização.</p>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:10px">
+          <h3 style="margin:0 0 4px;font-size:12px;letter-spacing:0.14em;text-transform:uppercase;color:#8896A2">Links úteis</h3>
+          <a href="https://jukcattani.com.br" style="font-size:14px;color:#C3CDD4" class="hv-4">Página inicial</a>
+          <a href="https://jukcattani.com.br/#sobre" style="font-size:14px;color:#C3CDD4" class="hv-5">Sobre nós</a>
+          <a href="https://jukcattani.com.br/#servicos" style="font-size:14px;color:#C3CDD4" class="hv-6">Nossos serviços</a>
+          <a href="https://jukcattani.com.br/blog/" style="font-size:14px;color:#C3CDD4" class="hv-7">Blog</a>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:10px">
+          <h3 style="margin:0 0 4px;font-size:12px;letter-spacing:0.14em;text-transform:uppercase;color:#8896A2">Contato</h3>
+          <a href="https://api.whatsapp.com/send?phone=5547996941734" style="font-size:14px;color:#C3CDD4" class="hv-8">47 99694-1734</a>
+          <span style="font-size:14px">contato@jukcattani.com.br</span>
+          <span style="font-size:14px;line-height:1.6;max-width:34ch">R. 1301, 471, Edifício Top Class Corporate, 23º Andar — Centro, Balneário Camboriú, SC</span>
+        </div>
+      </div>
+      <div style="max-width:1240px;margin:clamp(28px,3vw,40px) auto 0;padding-top:20px;border-top:1px solid rgba(247,244,239,0.12);display:flex;flex-wrap:wrap;gap:8px 24px;justify-content:space-between;font-size:12px;color:#8896A2">
+        <span>Assessoria Jurídica para a estética · Todos os direitos reservados</span>
+        <span>Copyright 2026 Juk Cattani</span>
+      </div>
+    </footer>
+  </div>
 
   <script>
-    // header scroll state
-    const header = document.getElementById('siteHeader');
-    window.addEventListener('scroll', () => {
-      header.classList.toggle('scrolled', window.scrollY > 40);
-    });
 
-    // scroll reveal
-    const revealEls = document.querySelectorAll('.reveal');
-    const io = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('in-view');
-          io.unobserve(entry.target);
+    // Contadores animados (portado de Component.animateCounters do runtime .dc)
+    (function () {
+      var nodes = Array.prototype.slice.call(document.querySelectorAll('[data-count]'));
+      if (!nodes.length) return;
+      function run(el) {
+        var target = parseInt(el.getAttribute('data-count'), 10);
+        if (!target || el.dataset.done) return;
+        el.dataset.done = '1';
+        var dur = 1300, t0 = performance.now();
+        function tick(now) {
+          var p = Math.min(1, (now - t0) / dur);
+          var eased = 1 - Math.pow(1 - p, 3);
+          el.textContent = String(Math.round(target * eased));
+          if (p < 1) requestAnimationFrame(tick);
         }
-      });
-    }, { threshold: 0.12 });
-    revealEls.forEach(el => io.observe(el));
-
-    // FAQ accordion
-    document.querySelectorAll('.faq-item').forEach(item => {
-      const btn = item.querySelector('.faq-q');
-      const ans = item.querySelector('.faq-a');
-      btn.addEventListener('click', () => {
-        const isOpen = item.classList.contains('open');
-        document.querySelectorAll('.faq-item.open').forEach(o => {
-          if (o !== item) {
-            o.classList.remove('open');
-            o.querySelector('.faq-a').style.maxHeight = null;
-          }
-        });
-        if (isOpen) {
-          item.classList.remove('open');
-          ans.style.maxHeight = null;
-        } else {
-          item.classList.add('open');
-          ans.style.maxHeight = ans.scrollHeight + 'px';
-        }
-      });
-    });
+        el.textContent = '0';
+        requestAnimationFrame(tick);
+      }
+      if (!('IntersectionObserver' in window)) { nodes.forEach(run); return; }
+      var io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (e) { if (e.isIntersecting) { run(e.target); io.unobserve(e.target); } });
+      }, { threshold: 0.4 });
+      nodes.forEach(function (n) { io.observe(n); });
+    })();
   </script>
-
 </body>
 
 </html>
