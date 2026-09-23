@@ -10,10 +10,9 @@
   <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
   <meta name="theme-color" content="#0E1720">
 
-  <!-- TODO ao subir: trocar SEU-ENDERECO pela URL final e descomentar -->
-  <!-- <link rel="canonical" href="https://SEU-ENDERECO"> -->
-  <!-- <meta property="og:url" content="https://SEU-ENDERECO"> -->
-  <!-- <meta property="og:image" content="https://SEU-ENDERECO/uploads/hero-palestra-plateia.webp"> -->
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Juk Cattani Sociedade de Advogados">
 
   <meta property="og:type" content="website">
   <meta property="og:locale" content="pt_BR">
@@ -26,11 +25,21 @@
   <link rel="apple-touch-icon" href="apple-touch-icon.png">
 
   <link rel="preload" href="fonts/roboto-variable-latin.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="preload" href="uploads/hero-palestra-plateia.webp" as="image" fetchpriority="high">
+  <link rel="preload" href="uploads/hero-palestra-plateia.webp" as="image" fetchpriority="high"
+    imagesrcset="uploads/hero-palestra-plateia-768.webp 768w, uploads/hero-palestra-plateia-900.webp 900w, uploads/hero-palestra-plateia-1280.webp 1280w, uploads/hero-palestra-plateia.webp 2048w" imagesizes="100vw">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@graph": [
+      {
+        "@type": "WebPage",
+        "name": "Assessoria Jurídica para Clínicas de Harmonização",
+        "description": "Assessoria jurídica contínua para clínicas de harmonização, com time dedicado, processos inclusos e atualização regulatória.",
+        "inLanguage": "pt-BR",
+        "dateModified": "2026-09-23",
+        "about": { "@id": "https://jukcattani.com.br/#organizacao" },
+        "publisher": { "@id": "https://jukcattani.com.br/#organizacao" }
+      },
       {
         "@type": "LegalService",
         "@id": "https://jukcattani.com.br/#organizacao",
@@ -102,8 +111,6 @@
   </script>
 
   <style>
-    /* Roboto (subset latin) - fonte variavel, pesos 100-900.
-       Arquivo local em fonts/. Sem requisicao externa: a pagina nao depende do Google Fonts. */
     @font-face {
       font-family: 'Roboto';
       font-style: normal;
@@ -199,7 +206,6 @@
   </style>
 
   <style>
-    /* hovers do protótipo, convertidos para CSS real */
     .hv-1:hover {
       border-color: #A04E2C !important
     }
@@ -232,9 +238,23 @@
       color: #F7F4EF !important
     }
   </style>
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-P56DBJTP');</script>
+  <script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "wnwdybqj6p");
+  </script>
+
 </head>
 
 <body>
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-P56DBJTP" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <div style="font-family:Roboto,Helvetica,Arial,sans-serif;color:#0E1720;background:#F7F4EF;width:100%;overflow-x:hidden">
 
     <header style="position:sticky;top:0;z-index:50;background:rgba(14,23,32,0.96);backdrop-filter:blur(8px);border-bottom:1px solid rgba(255,255,255,0.08)">
@@ -243,7 +263,7 @@
 
     <section data-screen-label="Hero" style="background:#0E1720;color:#F7F4EF;padding:0">
       <div style="position:relative;min-height:clamp(520px,76vh,720px);display:flex;align-items:center;justify-content:center;background:#0E1720;overflow:hidden">
-        <img src="uploads/hero-palestra-plateia.webp" fetchpriority="high" decoding="async" alt="Guilherme Juk Cattani palestrando para uma plateia de profissionais da harmonização" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 50%;display:block">
+        <img src="uploads/hero-palestra-plateia.webp" srcset="uploads/hero-palestra-plateia-768.webp 768w, uploads/hero-palestra-plateia-900.webp 900w, uploads/hero-palestra-plateia-1280.webp 1280w, uploads/hero-palestra-plateia.webp 2048w" sizes="100vw" fetchpriority="high" decoding="async" alt="Guilherme Juk Cattani palestrando para uma plateia de profissionais da harmonização" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 50%;display:block">
         <div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(14,23,32,0.72) 0%,rgba(14,23,32,0.84) 100%)"></div>
         <div style="position:relative;max-width:960px;padding:clamp(72px,10vw,120px) 24px clamp(48px,6vw,80px);display:flex;flex-direction:column;align-items:center;gap:26px;text-align:center">
           <span style="font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:12px;letter-spacing:0.16em;text-transform:uppercase;color:#E8C0AB">Assessoria jurídica contínua · Harmonização</span>
@@ -251,7 +271,6 @@
 
           <p style="margin:0;font-size:clamp(16px,1.5vw,18px);line-height:1.65;color:#D7DEE3;max-width:52ch;text-wrap:pretty">As clínicas que mais crescem no país não esperam o processo chegar para agir. Elas têm um time cuidando disso todo mês, antes que vire notícia, antes que vire prejuízo.</p>
           <div style="display:flex;flex-wrap:wrap;gap:12px;align-items:center;justify-content:center">
-
 
           </div>
         </div>
@@ -264,10 +283,6 @@
         </div>
       </div>
     </section>
-
-
-
-
 
     <section data-screen-label="Números" style="background:#16232E;color:#F7F4EF;padding:clamp(40px,5vw,68px) 24px">
       <div style="max-width:1240px;margin:0 auto;display:flex;flex-direction:column;gap:clamp(20px,2.4vw,32px)">
@@ -308,32 +323,32 @@
           <div id="galeria-escritorio">
             <div>
               <figure data-f="larga" style="flex:1.778 1 356px;aspect-ratio:16/9">
-                <img src="uploads/escritorio-recepcao-marca.webp" alt="Equipe do Juk Cattani Advogados na recepção do escritório, diante do letreiro da marca" loading="lazy" decoding="async">
+                <img src="uploads/escritorio-recepcao-marca.webp" srcset="uploads/escritorio-recepcao-marca-340.webp 340w, uploads/escritorio-recepcao-marca-700.webp 700w, uploads/escritorio-recepcao-marca.webp 1354w" sizes="(max-width: 760px) calc(100vw - 48px), 47vw" alt="Equipe do Juk Cattani Advogados na recepção do escritório, diante do letreiro da marca" loading="lazy" decoding="async">
               </figure>
               <figure data-f="alta" style="flex:0.667 1 133px;aspect-ratio:2/3">
-                <img src="uploads/escritorio-treinamento.webp" alt="Treinamento do escritório sobre atualização regulatória, com a sala cheia de profissionais" loading="lazy" decoding="async">
+                <img src="uploads/escritorio-treinamento.webp" srcset="uploads/escritorio-treinamento-252.webp 252w, uploads/escritorio-treinamento.webp 504w" sizes="(max-width: 760px) 45vw, 18vw" alt="Treinamento do escritório sobre atualização regulatória, com a sala cheia de profissionais" loading="lazy" decoding="async">
               </figure>
               <figure data-f="alta" style="flex:0.75 1 150px;aspect-ratio:3/4">
-                <img src="uploads/escritorio-atendimento-video.webp" alt="Advogada do time em atendimento por videochamada a uma clínica" loading="lazy" decoding="async">
+                <img src="uploads/escritorio-atendimento-video.webp" srcset="uploads/escritorio-atendimento-video-284.webp 284w, uploads/escritorio-atendimento-video.webp 568w" sizes="(max-width: 760px) 45vw, 20vw" alt="Advogada do time em atendimento por videochamada a uma clínica" loading="lazy" decoding="async">
               </figure>
             </div>
             <div>
               <figure data-f="alta" style="flex:0.667 1 133px;aspect-ratio:2/3">
-                <img decoding="async" src="uploads/escritorio-analise-caso.webp" alt="Advogadas do time Juk Cattani analisando um caso juntas no escritório" loading="lazy" style="object-position:50% 38%">
+                <img decoding="async" src="uploads/escritorio-analise-caso.webp" srcset="uploads/escritorio-analise-caso-270.webp 270w, uploads/escritorio-analise-caso.webp 540w" sizes="(max-width: 760px) 70vw, 18vw" alt="Advogadas do time Juk Cattani analisando um caso juntas no escritório" loading="lazy" style="object-position:50% 38%">
               </figure>
               <figure data-f="larga" style="flex:1.778 1 356px;aspect-ratio:16/9">
-                <img src="uploads/escritorio-open-space.webp" alt="Equipe do escritório trabalhando no open space da sede" loading="lazy" decoding="async">
+                <img src="uploads/escritorio-open-space.webp" srcset="uploads/escritorio-open-space-420.webp 420w, uploads/escritorio-open-space-840.webp 840w, uploads/escritorio-open-space.webp 1680w" sizes="(max-width: 760px) calc(100vw - 48px), 47vw" alt="Equipe do escritório trabalhando no open space da sede" loading="lazy" decoding="async">
               </figure>
               <figure data-f="alta" style="flex:0.75 1 150px;aspect-ratio:3/4">
-                <img src="uploads/escritorio-congresso.webp" alt="Palestra do escritório em congresso do setor, auditório lotado de profissionais" loading="lazy" decoding="async">
+                <img src="uploads/escritorio-congresso.webp" srcset="uploads/escritorio-congresso-292.webp 292w, uploads/escritorio-congresso.webp 584w" sizes="(max-width: 760px) 75vw, 20vw" alt="Palestra do escritório em congresso do setor, auditório lotado de profissionais" loading="lazy" decoding="async">
               </figure>
             </div>
             <div>
               <figure data-f="larga" style="flex:1.333 1 267px;aspect-ratio:4/3">
-                <img decoding="async" src="uploads/escritorio-reuniao-time.webp" alt="Guilherme Juk Cattani e o time em reunião de análise de caso" loading="lazy" style="object-position:50% 45%">
+                <img decoding="async" src="uploads/escritorio-reuniao-time.webp" srcset="uploads/escritorio-reuniao-time-340.webp 340w, uploads/escritorio-reuniao-time-700.webp 700w, uploads/escritorio-reuniao-time.webp 1050w" sizes="(max-width: 760px) calc(100vw - 48px), 37vw" alt="Guilherme Juk Cattani e o time em reunião de análise de caso" loading="lazy" style="object-position:50% 45%">
               </figure>
               <figure data-f="larga" style="flex:1.778 1 356px;aspect-ratio:16/9">
-                <img src="uploads/escritorio-sala-guilherme.webp" alt="Guilherme Juk Cattani trabalhando na sala de atendimento da sede em Balneário Camboriú" loading="lazy" decoding="async">
+                <img src="uploads/escritorio-sala-guilherme.webp" srcset="uploads/escritorio-sala-guilherme-350.webp 350w, uploads/escritorio-sala-guilherme-700.webp 700w, uploads/escritorio-sala-guilherme.webp 1330w" sizes="(max-width: 760px) calc(100vw - 48px), 49vw" alt="Guilherme Juk Cattani trabalhando na sala de atendimento da sede em Balneário Camboriú" loading="lazy" decoding="async">
               </figure>
             </div>
           </div>
@@ -346,7 +361,7 @@
     <section data-screen-label="Clínicas que você admira" style="background:#F7F4EF;padding:clamp(28px,3.5vw,48px) 24px clamp(56px,7vw,104px)">
       <div style="max-width:1240px;margin:0 auto;border-top:1px solid #DED7CC;padding-top:clamp(28px,3vw,40px);display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:clamp(28px,4vw,56px);align-items:center">
         <div style="min-width:0;position:relative;aspect-ratio:3/2;border-radius:4px;overflow:hidden;background:#E7E1D8">
-          <img src="uploads/clinicas-retrato-time.webp" loading="lazy" decoding="async" alt="Time do escritório Juk Cattani reunido na sede em Balneário Camboriú" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:75% 50%;display:block">
+          <img src="uploads/clinicas-retrato-time.webp" srcset="uploads/clinicas-retrato-time-342.webp 342w, uploads/clinicas-retrato-time-684.webp 684w, uploads/clinicas-retrato-time.webp 1184w" sizes="(max-width: 760px) calc(100vw - 48px), 41vw" loading="lazy" decoding="async" alt="Time do escritório Juk Cattani reunido na sede em Balneário Camboriú" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:75% 50%;display:block">
         </div>
         <div style="min-width:0;display:flex;flex-direction:column;gap:22px">
           <span style="font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:#8F4526">O padrão das maiores</span>
@@ -405,16 +420,13 @@
           </div>
         </div>
         <div style="position:relative;width:100%;max-width:840px;margin:0 auto;aspect-ratio:16/9;border-radius:4px;overflow:hidden;background:#E7E1D8">
-          <img decoding="async" src="uploads/escritorio-open-space.webp" alt="Equipe do Juk Cattani no open space da sede acompanhando os casos das clínicas" loading="lazy" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 45%;display:block">
+          <img decoding="async" src="uploads/escritorio-open-space.webp" srcset="uploads/escritorio-open-space-420.webp 420w, uploads/escritorio-open-space-840.webp 840w, uploads/escritorio-open-space.webp 1680w" sizes="(max-width: 888px) calc(100vw - 48px), 840px" alt="Equipe do Juk Cattani no open space da sede acompanhando os casos das clínicas" loading="lazy" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 45%;display:block">
         </div>
 
         <p style="margin:clamp(20px,3vw,44px) auto 0;max-width:60ch;text-align:center;font-size:clamp(28px,3.8vw,48px);line-height:1.12;font-weight:700;letter-spacing:-0.02em;color:#0E1720;text-wrap:balance">Cada caso resolvido gera aprendizado e <span style="color:#A04E2C">prevenção</span> para os próximos clientes.</p>
 
-
       </div>
     </section>
-
-
 
     <section data-screen-label="Jornada 12 meses" style="background:#F7F4EF;padding:clamp(28px,3.5vw,48px) 0 clamp(56px,7vw,104px)">
       <div style="max-width:1240px;margin:0 auto clamp(28px,3vw,40px);padding:0 24px">
@@ -555,11 +567,9 @@
       </div>
     </section>
 
-
-
     <section id="comparativo" data-screen-label="Comparativo" style="position:relative;background:#0E1720;color:#F7F4EF;padding:0;overflow:hidden;border-bottom:4px solid #A04E2C">
       <div style="position:relative;min-height:clamp(480px,64vh,680px);display:flex;align-items:center;justify-content:center">
-        <img src="uploads/comparativo-palco-evento.webp" loading="lazy" decoding="async" alt="Guilherme Juk Cattani no palco com o time do escritório diante da plateia em evento do setor" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 45%;display:block" />
+        <img src="uploads/comparativo-palco-evento.webp" srcset="uploads/comparativo-palco-evento-768.webp 768w, uploads/comparativo-palco-evento-900.webp 900w, uploads/comparativo-palco-evento-1280.webp 1280w, uploads/comparativo-palco-evento.webp 1600w" sizes="100vw" loading="lazy" decoding="async" alt="Guilherme Juk Cattani no palco com o time do escritório diante da plateia em evento do setor" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 45%;display:block" />
         <div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(14,23,32,0.6) 0%,rgba(14,23,32,0.84) 100%)"></div>
         <div style="position:relative;max-width:900px;padding:clamp(64px,8vw,104px) 24px;display:flex;flex-direction:column;align-items:center;gap:clamp(22px,2.6vw,32px);text-align:center">
           <span style="font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:#E8C0AB">Generalista x Assessoria Juk Cattani</span>
@@ -570,13 +580,11 @@
       </div>
     </section>
 
-
-
     <section data-screen-label="Fundador" style="background:#F7F4EF;padding:clamp(40px,5vw,72px) 24px clamp(56px,7vw,104px)">
       <div style="max-width:1240px;margin:0 auto;border-top:1px solid #DED7CC;padding-top:clamp(28px,3vw,40px);display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:clamp(28px,4vw,56px);align-items:start">
         <div style="min-width:0;display:flex;flex-direction:column;gap:14px">
           <div style="position:relative;aspect-ratio:4/5;border-radius:4px;overflow:hidden;background:#16232E">
-            <img src="uploads/fundador-guilherme.webp" loading="lazy" decoding="async" alt="Guilherme Juk Cattani palestrando em congresso do setor" style="width:100%;height:100%;object-fit:cover;object-position:50% 22%;display:block">
+            <img src="uploads/fundador-guilherme.webp" srcset="uploads/fundador-guilherme-342.webp 342w, uploads/fundador-guilherme-684.webp 684w, uploads/fundador-guilherme.webp 1184w" sizes="(max-width: 760px) calc(100vw - 48px), 41vw" loading="lazy" decoding="async" alt="Guilherme Juk Cattani palestrando em congresso do setor" style="width:100%;height:100%;object-fit:cover;object-position:50% 22%;display:block">
           </div>
         </div>
         <div style="min-width:0;display:flex;flex-direction:column;gap:20px">
@@ -596,7 +604,6 @@
                 <circle cx="17.2" cy="6.8" r="1.15" fill="currentColor" stroke="none"></circle>
               </svg>
             </a>
-
 
           </div>
         </div>
@@ -680,7 +687,6 @@
 
   <script>
 
-    // Contadores animados (portado de Component.animateCounters do runtime .dc)
     (function () {
       var nodes = Array.prototype.slice.call(document.querySelectorAll('[data-count]'));
       if (!nodes.length) return;
