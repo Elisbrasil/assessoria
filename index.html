@@ -238,17 +238,33 @@
       color: #F7F4EF !important
     }
   </style>
-  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-P56DBJTP');</script>
-  <script type="text/javascript">
-    (function(c,l,a,r,i,t,y){
-        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-    })(window, document, "clarity", "script", "wnwdybqj6p");
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    (function () {
+      var carregado = false;
+      var gatilhos = ['scroll', 'mousemove', 'touchstart', 'pointerdown', 'keydown'];
+
+      function carregar() {
+        if (carregado) return;
+        carregado = true;
+        gatilhos.forEach(function (ev) { window.removeEventListener(ev, carregar); });
+
+        (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-P56DBJTP');
+
+        (function(c,l,a,r,i,t,y){
+          c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+          t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+          y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+        })(window, document, "clarity", "script", "wnwdybqj6p");
+      }
+
+      gatilhos.forEach(function (ev) { window.addEventListener(ev, carregar, { passive: true }); });
+      setTimeout(carregar, 3000);
+    })();
   </script>
 
 </head>
@@ -260,6 +276,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <header style="position:sticky;top:0;z-index:50;background:rgba(14,23,32,0.96);backdrop-filter:blur(8px);border-bottom:1px solid rgba(255,255,255,0.08)">
 
     </header>
+
+    <main>
 
     <section data-screen-label="Hero" style="background:#0E1720;color:#F7F4EF;padding:0">
       <div style="position:relative;min-height:clamp(520px,76vh,720px);display:flex;align-items:center;justify-content:center;background:#0E1720;overflow:hidden">
@@ -657,6 +675,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         </div>
       </div>
     </section>
+
+    </main>
 
     <footer style="background:#0E1720;color:#C3CDD4;padding:clamp(40px,5vw,64px) 24px;border-top:1px solid rgba(247,244,239,0.12)">
       <div style="max-width:1240px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:clamp(24px,3vw,48px)">
