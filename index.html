@@ -262,15 +262,59 @@
     }
 
 
+    @media (max-width: 560px) {
+      .entrega {
+        display: grid !important;
+        grid-template-columns: 60px 1fr;
+        column-gap: 18px !important;
+        row-gap: 6px !important;
+        align-items: start !important;
+        text-align: left !important
+      }
+
+      .entrega-icone {
+        grid-row: 1 / span 2
+      }
+
+      .entrega-icone>div {
+        width: 60px !important;
+        height: 60px !important
+      }
+
+      .entrega-icone svg {
+        width: 28px;
+        height: 28px
+      }
+
+      .entrega-icone>span {
+        min-width: 24px !important;
+        height: 24px !important;
+        font-size: 10px !important;
+        right: -4px !important;
+        bottom: -4px !important
+      }
+
+      .entrega h3,
+      .entrega p {
+        max-width: none !important;
+        margin: 0 !important
+      }
+
+      .entrega h3 {
+        padding-top: 6px
+      }
+    }
+
     .ig-bloco {
       display: grid;
-      grid-template-columns: 1fr auto;
-      gap: clamp(36px, 5vw, 72px);
+      grid-template-columns: minmax(0, 340px) auto;
+      justify-content: center;
+      gap: clamp(28px, 4vw, 56px);
       align-items: center
     }
 
     .ig-celular-wrap {
-      width: 340px
+      width: 200px
     }
 
     @media (max-width: 760px) {
@@ -292,16 +336,13 @@
       }
     }
 
-    .ig-rolagem {
-      scrollbar-width: none
+    .ig-print img {
+      filter: drop-shadow(0 30px 40px rgba(0, 0, 0, 0.55)) drop-shadow(0 0 60px rgba(160, 78, 44, 0.3));
+      transition: transform 0.3s ease
     }
 
-    .ig-rolagem::-webkit-scrollbar {
-      display: none
-    }
-
-    .ig-rolagem:hover {
-      color: #0E1720 !important
+    .ig-print:hover img {
+      transform: translateY(-4px)
     }
 
     .ig-botao {
@@ -391,7 +432,7 @@
           <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1px;background:rgba(247,244,239,0.14)">
             <div style="background:#16232E;padding:clamp(16px,2vw,24px) 4px 4px 0;display:flex;flex-direction:column;gap:12px">
               <div style="display:flex;align-items:flex-start;font-weight:900;letter-spacing:-0.045em;line-height:0.86;color:#F7F4EF">
-                <span data-count="1" style="font-size:clamp(56px,8vw,108px)">1</span>
+                <span style="font-size:clamp(56px,8vw,108px)">1</span>
                 <span style="font-size:clamp(22px,3vw,40px);color:#C97650;padding-top:0.12em">º</span>
               </div>
               <p style="margin:0;font-size:15px;line-height:1.5;color:#C3CDD4;max-width:26ch;text-wrap:pretty">escritório do Brasil dedicado integralmente ao Direito na harmonização</p>
@@ -548,8 +589,8 @@
           </div>
 
           <div style="max-width:980px;margin:clamp(24px,3vw,36px) auto 0;display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:clamp(26px,3vw,38px) clamp(16px,2vw,24px)">
-            <div style="display:flex;flex-direction:column;align-items:center;gap:14px;text-align:center">
-              <div style="position:relative">
+            <div class="entrega" style="display:flex;flex-direction:column;align-items:center;gap:14px;text-align:center">
+              <div class="entrega-icone" style="position:relative">
                 <div style="width:88px;height:88px;border-radius:50%;border:1px dashed #C4BAAC;background:#FFFFFF;display:flex;align-items:center;justify-content:center">
                   <svg width="38" height="38" viewBox="0 0 24 24" fill="none" stroke="#A04E2C" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
                     <path d="M14 3H6v18h12V7z"></path>
@@ -561,8 +602,8 @@
               <h3 style="margin:0;font-size:15px;line-height:1.35;font-weight:700;max-width:20ch;text-wrap:pretty">Termos personalizados para a sua clínica</h3>
               <p style="margin:-4px 0 0;font-size:14px;line-height:1.55;color:#4A555E;max-width:30ch;text-wrap:pretty">Todos os documentos necessários para os procedimentos que você realiza.</p>
             </div>
-            <div style="display:flex;flex-direction:column;align-items:center;gap:14px;text-align:center">
-              <div style="position:relative">
+            <div class="entrega" style="display:flex;flex-direction:column;align-items:center;gap:14px;text-align:center">
+              <div class="entrega-icone" style="position:relative">
                 <div style="width:88px;height:88px;border-radius:50%;border:1px dashed #C4BAAC;background:#FFFFFF;display:flex;align-items:center;justify-content:center">
                   <svg width="38" height="38" viewBox="0 0 24 24" fill="none" stroke="#A04E2C" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
                     <circle cx="11" cy="11" r="6"></circle>
@@ -574,8 +615,8 @@
               <h3 style="margin:0;font-size:15px;line-height:1.35;font-weight:700;max-width:20ch;text-wrap:pretty">Raio-x regulatório</h3>
               <p style="margin:-4px 0 0;font-size:14px;line-height:1.55;color:#4A555E;max-width:30ch;text-wrap:pretty">Um diagnóstico de como a sua clínica está diante do seu conselho, Anvisa e Vigilância Sanitária, com o que precisa de ajuste.</p>
             </div>
-            <div style="display:flex;flex-direction:column;align-items:center;gap:14px;text-align:center">
-              <div style="position:relative">
+            <div class="entrega" style="display:flex;flex-direction:column;align-items:center;gap:14px;text-align:center">
+              <div class="entrega-icone" style="position:relative">
                 <div style="width:88px;height:88px;border-radius:50%;border:1px dashed #C4BAAC;background:#FFFFFF;display:flex;align-items:center;justify-content:center">
                   <svg width="38" height="38" viewBox="0 0 24 24" fill="none" stroke="#A04E2C" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
                     <rect x="3" y="7" width="18" height="13" rx="2"></rect>
@@ -587,8 +628,8 @@
               <h3 style="margin:0;font-size:15px;line-height:1.35;font-weight:700;max-width:20ch;text-wrap:pretty">Raio-x trabalhista da sua equipe</h3>
               <p style="margin:-4px 0 0;font-size:14px;line-height:1.55;color:#4A555E;max-width:30ch;text-wrap:pretty">Revisão dos contratos e vínculos da sua equipe para você crescer sem surpresas trabalhistas lá na frente.</p>
             </div>
-            <div style="display:flex;flex-direction:column;align-items:center;gap:14px;text-align:center">
-              <div style="position:relative">
+            <div class="entrega" style="display:flex;flex-direction:column;align-items:center;gap:14px;text-align:center">
+              <div class="entrega-icone" style="position:relative">
                 <div style="width:88px;height:88px;border-radius:50%;border:1px dashed #C4BAAC;background:#FFFFFF;display:flex;align-items:center;justify-content:center">
                   <svg width="38" height="38" viewBox="0 0 24 24" fill="none" stroke="#A04E2C" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
                     <circle cx="12" cy="12" r="9"></circle>
@@ -601,8 +642,8 @@
               <h3 style="margin:0;font-size:15px;line-height:1.35;font-weight:700;max-width:20ch;text-wrap:pretty">Análise das suas redes sociais</h3>
               <p style="margin:-4px 0 0;font-size:14px;line-height:1.55;color:#4A555E;max-width:30ch;text-wrap:pretty">Revisão da sua bio e posts para você divulgar seu trabalho dentro das regras do seu conselho.</p>
             </div>
-            <div style="display:flex;flex-direction:column;align-items:center;gap:14px;text-align:center">
-              <div style="position:relative">
+            <div class="entrega" style="display:flex;flex-direction:column;align-items:center;gap:14px;text-align:center">
+              <div class="entrega-icone" style="position:relative">
                 <div style="width:88px;height:88px;border-radius:50%;border:1px dashed #C4BAAC;background:#FFFFFF;display:flex;align-items:center;justify-content:center">
                   <svg width="38" height="38" viewBox="0 0 24 24" fill="none" stroke="#A04E2C" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
                     <path d="M12 3l8 3v6c0 5-4 8-8 9-4-1-8-4-8-9V6z"></path>
@@ -613,8 +654,8 @@
               <h3 style="margin:0;font-size:15px;line-height:1.35;font-weight:700;max-width:20ch;text-wrap:pretty">Análise da apólice de seguros</h3>
               <p style="margin:-4px 0 0;font-size:14px;line-height:1.55;color:#4A555E;max-width:30ch;text-wrap:pretty">A gente lê a sua apólice e mostra exatamente o que ela cobre, antes de você precisar usar.</p>
             </div>
-            <div style="display:flex;flex-direction:column;align-items:center;gap:14px;text-align:center">
-              <div style="position:relative">
+            <div class="entrega" style="display:flex;flex-direction:column;align-items:center;gap:14px;text-align:center">
+              <div class="entrega-icone" style="position:relative">
                 <div style="width:88px;height:88px;border-radius:50%;border:1px dashed #C4BAAC;background:#FFFFFF;display:flex;align-items:center;justify-content:center">
                   <svg width="38" height="38" viewBox="0 0 24 24" fill="none" stroke="#A04E2C" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
                     <path d="M20 4H4v12h4v4l5-4h7z"></path>
@@ -625,8 +666,8 @@
               <h3 style="margin:0;font-size:15px;line-height:1.35;font-weight:700;max-width:20ch;text-wrap:pretty">Gestão de relacionamento e crises</h3>
               <p style="margin:-4px 0 0;font-size:14px;line-height:1.55;color:#4A555E;max-width:30ch;text-wrap:pretty">Quando um paciente fica insatisfeito ou um caso ganha repercussão, o time assume a conversa e conduz o caso por você.</p>
             </div>
-            <div style="display:flex;flex-direction:column;align-items:center;gap:14px;text-align:center">
-              <div style="position:relative">
+            <div class="entrega" style="display:flex;flex-direction:column;align-items:center;gap:14px;text-align:center">
+              <div class="entrega-icone" style="position:relative">
                 <div style="width:88px;height:88px;border-radius:50%;border:1px dashed #A04E2C;background:#A04E2C;display:flex;align-items:center;justify-content:center">
                   <svg width="38" height="38" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
                     <rect x="5" y="10" width="14" height="10" rx="2"></rect>
@@ -780,14 +821,14 @@
             </div>
           </div>
         </div>
-        <div id="instagram" class="ig-bloco" style="max-width:1080px;margin:clamp(56px,7vw,96px) auto 0;padding-top:clamp(40px,5vw,64px);border-top:1px solid rgba(247,244,239,0.12)">
-          <div class="ig-texto" style="min-width:0;display:flex;flex-direction:column;gap:20px">
+        <div id="instagram" class="ig-bloco" style="max-width:620px;margin:clamp(32px,4vw,48px) auto 0;padding-top:clamp(24px,3vw,36px);border-top:1px solid rgba(247,244,239,0.12)">
+          <div class="ig-texto" style="min-width:0;display:flex;flex-direction:column;gap:16px">
             <span style="display:inline-flex;align-items:center;gap:10px;font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:#E8C0AB">
               <span aria-hidden="true" style="width:26px;height:26px;border-radius:8px;background:linear-gradient(45deg,#F9CE34 0%,#EE2A7B 50%,#6228D7 100%);display:inline-flex;align-items:center;justify-content:center"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="3" width="18" height="18" rx="5"></rect><circle cx="12" cy="12" r="4"></circle><circle cx="17.2" cy="6.8" r="1.15" fill="#FFFFFF" stroke="none"></circle></svg></span>
               No Instagram
             </span>
-            <h2 style="margin:0;font-size:clamp(28px,3.4vw,44px);line-height:1.08;font-weight:700;letter-spacing:-0.02em;max-width:18ch;text-wrap:pretty">Acompanhe a Juk Cattani por dentro</h2>
-            <p style="margin:0;font-size:clamp(16px,1.4vw,18px);line-height:1.6;color:#C3CDD4;max-width:40ch;text-wrap:pretty">Bastidores do escritório, casos reais e as mudanças nas regras da harmonização explicadas de um jeito que você aplica na sua clínica.</p>
+            <h2 style="margin:0;font-size:clamp(22px,2.4vw,30px);line-height:1.1;font-weight:700;letter-spacing:-0.02em;max-width:18ch;text-wrap:pretty">Acompanhe a Juk Cattani por dentro</h2>
+            <p style="margin:0;font-size:15px;line-height:1.55;color:#C3CDD4;max-width:40ch;text-wrap:pretty">Bastidores do escritório, casos reais e as mudanças nas regras da harmonização explicadas de um jeito que você aplica na sua clínica.</p>
             <a href="https://www.instagram.com/jukcattaniadvogados/" target="_blank" rel="noopener" class="ig-botao" style="align-self:flex-start;display:inline-flex;align-items:center;gap:12px;padding:10px 22px 10px 10px;border-radius:999px;background:#F7F4EF;color:#0E1720;font-size:16px;font-weight:600;min-height:54px">
               <span aria-hidden="true" style="flex:0 0 auto;width:34px;height:34px;border-radius:50%;background:linear-gradient(45deg,#F9CE34 0%,#EE2A7B 50%,#6228D7 100%);display:inline-flex;align-items:center;justify-content:center"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="3" width="18" height="18" rx="5"></rect><circle cx="12" cy="12" r="4"></circle><circle cx="17.2" cy="6.8" r="1.15" fill="#FFFFFF" stroke="none"></circle></svg></span>
               Seguir @jukcattaniadvogados
@@ -795,93 +836,9 @@
           </div>
 
           <div class="ig-celular-wrap" style="min-width:0;display:flex;justify-content:center">
-            <div style="position:relative;width:min(320px,100%);padding:12px;border-radius:44px;background:#05090D;box-shadow:0 0 0 1px rgba(247,244,239,0.16),0 30px 60px -20px rgba(0,0,0,0.7),0 0 80px -10px rgba(160,78,44,0.35)">
-              <span aria-hidden="true" style="position:absolute;top:20px;left:50%;transform:translateX(-50%);width:84px;height:22px;border-radius:999px;background:#05090D;z-index:3"></span>
-              <div id="ig-perfil" class="ig-tela" style="position:relative;height:clamp(540px,64vh,620px);border-radius:32px;overflow:hidden;background:#FFFFFF;color:#0E1720;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif">
-                <a href="https://www.instagram.com/jukcattaniadvogados/" target="_blank" rel="noopener" aria-label="Ver o perfil @jukcattaniadvogados no Instagram" class="ig-rolagem" style="position:absolute;inset:0;overflow-y:auto;color:#0E1720;display:block">
-                  <span style="display:flex;justify-content:space-between;align-items:center;padding:14px 24px 0;font-size:13px;font-weight:600;height:40px">
-                    <span>9:41</span>
-                    <span style="display:inline-flex;gap:5px;align-items:center"><span style="width:16px;height:9px;border-radius:2px;background:#0E1720"></span><span style="width:22px;height:11px;border-radius:3px;border:1.5px solid #0E1720;padding:1px"><span style="display:block;height:100%;width:75%;background:#0E1720;border-radius:1px"></span></span></span>
-                  </span>
-
-                  <span style="display:flex;align-items:center;justify-content:space-between;padding:8px 14px">
-                    <span style="display:inline-flex;align-items:center;gap:4px;font-size:17px;font-weight:700">jukcattaniadvogados</span>
-                    <span style="display:inline-flex;gap:16px"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#0E1720" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="3" width="18" height="18" rx="5"/><path d="M12 8v8M8 12h8"/></svg> <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#0E1720" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 7h16M4 12h16M4 17h16"/></svg></span>
-                  </span>
-
-                  <span style="display:flex;align-items:center;gap:18px;padding:6px 14px 0">
-                    <span style="flex:0 0 auto;width:78px;height:78px;border-radius:50%;padding:3px;background:linear-gradient(45deg,#F9CE34 0%,#EE2A7B 50%,#6228D7 100%)"><span style="display:flex;align-items:center;justify-content:center;width:100%;height:100%;border-radius:50%;border:3px solid #FFFFFF;background:#0E1720"><img class="adiada" data-src="uploads/rodape-logo-branco-340.webp" alt="" decoding="async" style="width:76%;height:auto;display:block"></span></span>
-                    <span style="flex:1 1 auto;display:flex;justify-content:space-around"><span style="display:flex;flex-direction:column;align-items:center;gap:1px"><b style="font-size:15px;font-weight:700">XXX</b><span style="font-size:12px;color:#0E1720">posts</span></span><span style="display:flex;flex-direction:column;align-items:center;gap:1px"><b style="font-size:15px;font-weight:700">XX mil</b><span style="font-size:12px;color:#0E1720">seguidores</span></span><span style="display:flex;flex-direction:column;align-items:center;gap:1px"><b style="font-size:15px;font-weight:700">XXX</b><span style="font-size:12px;color:#0E1720">seguindo</span></span></span>
-                  </span>
-
-                  <span style="display:flex;flex-direction:column;gap:2px;padding:10px 14px 0;font-size:13px;line-height:1.38">
-                    <b style="font-weight:600">Juk Cattani Advogados</b>
-                    <span style="color:#737373">Escritório de advocacia</span>
-                    <span>O 1º escritório do Brasil dedicado ao Direito na harmonização ⚖️</span>
-                    <span>+60 advogados e especialistas</span>
-                    <span>📍 Balneário Camboriú · Atuação nacional</span>
-                    <span style="color:#00376B;font-weight:500">jukcattani.com.br</span>
-                  </span>
-
-                  <span style="display:grid;grid-template-columns:1fr 1fr;gap:6px;padding:12px 14px 0">
-                    <span style="display:flex;align-items:center;justify-content:center;height:32px;border-radius:8px;background:#0095F6;color:#FFFFFF;font-size:13px;font-weight:600">Seguir</span>
-                    <span style="display:flex;align-items:center;justify-content:center;height:32px;border-radius:8px;background:#EFEFEF;font-size:13px;font-weight:600">Mensagem</span>
-                  </span>
-
-                  <span class="ig-destaques" style="display:flex;gap:12px;padding:14px 14px 4px;overflow:hidden">
-                      <span style="flex:0 0 auto;display:flex;flex-direction:column;align-items:center;gap:5px;width:60px">
-                        <span style="width:56px;height:56px;border-radius:50%;padding:2px;border:1px solid #DBDBDB"><img class="adiada" data-src="uploads/escritorio-recepcao-marca-340.webp" alt="" decoding="async" style="width:100%;height:100%;border-radius:50%;object-fit:cover;display:block"></span>
-                        <span style="font-size:11px;color:#0E1720;white-space:nowrap">Escritório</span>
-                      </span>
-                      <span style="flex:0 0 auto;display:flex;flex-direction:column;align-items:center;gap:5px;width:60px">
-                        <span style="width:56px;height:56px;border-radius:50%;padding:2px;border:1px solid #DBDBDB"><img class="adiada" data-src="uploads/escritorio-congresso-292.webp" alt="" decoding="async" style="width:100%;height:100%;border-radius:50%;object-fit:cover;display:block"></span>
-                        <span style="font-size:11px;color:#0E1720;white-space:nowrap">Eventos</span>
-                      </span>
-                      <span style="flex:0 0 auto;display:flex;flex-direction:column;align-items:center;gap:5px;width:60px">
-                        <span style="width:56px;height:56px;border-radius:50%;padding:2px;border:1px solid #DBDBDB"><img class="adiada" data-src="uploads/escritorio-reuniao-time-340.webp" alt="" decoding="async" style="width:100%;height:100%;border-radius:50%;object-fit:cover;display:block"></span>
-                        <span style="font-size:11px;color:#0E1720;white-space:nowrap">Time</span>
-                      </span>
-                      <span style="flex:0 0 auto;display:flex;flex-direction:column;align-items:center;gap:5px;width:60px">
-                        <span style="width:56px;height:56px;border-radius:50%;padding:2px;border:1px solid #DBDBDB"><img class="adiada" data-src="uploads/fundador-guilherme-342.webp" alt="" decoding="async" style="width:100%;height:100%;border-radius:50%;object-fit:cover;display:block"></span>
-                        <span style="font-size:11px;color:#0E1720;white-space:nowrap">Guilherme</span>
-                      </span>
-                  </span>
-
-                  <span style="display:grid;grid-template-columns:repeat(3,1fr);margin-top:10px;border-top:1px solid #DBDBDB">
-                    <span style="display:flex;justify-content:center;padding:10px 0;border-bottom:1.5px solid #0E1720">ICON_
-                      <span style="aspect-ratio:4/5;overflow:hidden;background:#EFEFEF"><img class="adiada" data-src="uploads/time-comercial-420.webp" alt="" decoding="async" style="width:100%;height:100%;object-fit:cover;display:block"></span>
-                      <span style="aspect-ratio:4/5;overflow:hidden;background:#EFEFEF"><img class="adiada" data-src="uploads/hero-reuniao-time-768.webp" alt="" decoding="async" style="width:100%;height:100%;object-fit:cover;display:block"></span>
-                      <span style="aspect-ratio:4/5;overflow:hidden;background:#EFEFEF"><img class="adiada" data-src="uploads/escritorio-congresso-292.webp" alt="" decoding="async" style="width:100%;height:100%;object-fit:cover;display:block"></span>
-                      <span style="aspect-ratio:4/5;overflow:hidden;background:#EFEFEF"><img class="adiada" data-src="uploads/escritorio-analise-caso-270.webp" alt="" decoding="async" style="width:100%;height:100%;object-fit:cover;display:block"></span>
-                      <span style="aspect-ratio:4/5;overflow:hidden;background:#EFEFEF"><img class="adiada" data-src="uploads/fundador-guilherme-342.webp" alt="" decoding="async" style="width:100%;height:100%;object-fit:cover;display:block"></span>
-                      <span style="aspect-ratio:4/5;overflow:hidden;background:#EFEFEF"><img class="adiada" data-src="uploads/escritorio-recepcao-marca-340.webp" alt="" decoding="async" style="width:100%;height:100%;object-fit:cover;display:block"></span>
-                      <span style="aspect-ratio:4/5;overflow:hidden;background:#EFEFEF"><img class="adiada" data-src="uploads/escritorio-treinamento-252.webp" alt="" decoding="async" style="width:100%;height:100%;object-fit:cover;display:block"></span>
-                      <span style="aspect-ratio:4/5;overflow:hidden;background:#EFEFEF"><img class="adiada" data-src="uploads/escritorio-sala-guilherme-350.webp" alt="" decoding="async" style="width:100%;height:100%;object-fit:cover;display:block"></span>
-                      <span style="aspect-ratio:4/5;overflow:hidden;background:#EFEFEF"><img class="adiada" data-src="uploads/escritorio-open-space-420.webp" alt="" decoding="async" style="width:100%;height:100%;object-fit:cover;display:block"></span>
-                      <span style="aspect-ratio:4/5;overflow:hidden;background:#EFEFEF"><img class="adiada" data-src="uploads/escritorio-atendimento-video-284.webp" alt="" decoding="async" style="width:100%;height:100%;object-fit:cover;display:block"></span>
-                      <span style="aspect-ratio:4/5;overflow:hidden;background:#EFEFEF"><img class="adiada" data-src="uploads/clinicas-guilherme-estudo-342.webp" alt="" decoding="async" style="width:100%;height:100%;object-fit:cover;display:block"></span>
-                      <span style="aspect-ratio:4/5;overflow:hidden;background:#EFEFEF"><img class="adiada" data-src="uploads/comparativo-palco-evento-768.webp" alt="" decoding="async" style="width:100%;height:100%;object-fit:cover;display:block"></span></span>
-                    <span style="display:flex;justify-content:center;padding:10px 0;opacity:0.45"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0E1720" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="3" width="18" height="18" rx="5"/><path d="M3 8h18M8 3l3 5M14 3l3 5"/><path d="M10 11.5v5l4-2.5z"/></svg></span>
-                    <span style="display:flex;justify-content:center;padding:10px 0;opacity:0.45"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0E1720" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="3" width="18" height="18" rx="3"/><circle cx="12" cy="10" r="3"/><path d="M6.5 19c1-2.6 3-4 5.5-4s4.5 1.4 5.5 4"/></svg></span>
-                  </span>
-
-                  <span style="display:grid;grid-template-columns:repeat(3,1fr);gap:2px">
-                      <span style="aspect-ratio:4/5;overflow:hidden;background:#EFEFEF"><img class="adiada" data-src="uploads/time-comercial-420.webp" alt="" decoding="async" style="width:100%;height:100%;object-fit:cover;display:block"></span>
-                      <span style="aspect-ratio:4/5;overflow:hidden;background:#EFEFEF"><img class="adiada" data-src="uploads/hero-reuniao-time-768.webp" alt="" decoding="async" style="width:100%;height:100%;object-fit:cover;display:block"></span>
-                      <span style="aspect-ratio:4/5;overflow:hidden;background:#EFEFEF"><img class="adiada" data-src="uploads/escritorio-congresso-292.webp" alt="" decoding="async" style="width:100%;height:100%;object-fit:cover;display:block"></span>
-                      <span style="aspect-ratio:4/5;overflow:hidden;background:#EFEFEF"><img class="adiada" data-src="uploads/escritorio-analise-caso-270.webp" alt="" decoding="async" style="width:100%;height:100%;object-fit:cover;display:block"></span>
-                      <span style="aspect-ratio:4/5;overflow:hidden;background:#EFEFEF"><img class="adiada" data-src="uploads/fundador-guilherme-342.webp" alt="" decoding="async" style="width:100%;height:100%;object-fit:cover;display:block"></span>
-                      <span style="aspect-ratio:4/5;overflow:hidden;background:#EFEFEF"><img class="adiada" data-src="uploads/escritorio-recepcao-marca-340.webp" alt="" decoding="async" style="width:100%;height:100%;object-fit:cover;display:block"></span>
-                      <span style="aspect-ratio:4/5;overflow:hidden;background:#EFEFEF"><img class="adiada" data-src="uploads/escritorio-treinamento-252.webp" alt="" decoding="async" style="width:100%;height:100%;object-fit:cover;display:block"></span>
-                      <span style="aspect-ratio:4/5;overflow:hidden;background:#EFEFEF"><img class="adiada" data-src="uploads/escritorio-sala-guilherme-350.webp" alt="" decoding="async" style="width:100%;height:100%;object-fit:cover;display:block"></span>
-                      <span style="aspect-ratio:4/5;overflow:hidden;background:#EFEFEF"><img class="adiada" data-src="uploads/escritorio-open-space-420.webp" alt="" decoding="async" style="width:100%;height:100%;object-fit:cover;display:block"></span>
-                      <span style="aspect-ratio:4/5;overflow:hidden;background:#EFEFEF"><img class="adiada" data-src="uploads/escritorio-atendimento-video-284.webp" alt="" decoding="async" style="width:100%;height:100%;object-fit:cover;display:block"></span>
-                      <span style="aspect-ratio:4/5;overflow:hidden;background:#EFEFEF"><img class="adiada" data-src="uploads/clinicas-guilherme-estudo-342.webp" alt="" decoding="async" style="width:100%;height:100%;object-fit:cover;display:block"></span>
-                      <span style="aspect-ratio:4/5;overflow:hidden;background:#EFEFEF"><img class="adiada" data-src="uploads/comparativo-palco-evento-768.webp" alt="" decoding="async" style="width:100%;height:100%;object-fit:cover;display:block"></span>
-                  </span>
-                </a>
-              </div>
-            </div>
+            <a href="https://www.instagram.com/jukcattaniadvogados/" target="_blank" rel="noopener" class="ig-print" aria-label="Ver o perfil @jukcattaniadvogados no Instagram" style="display:block;width:min(180px,56vw);line-height:0">
+              <img src="uploads/instagram-perfil-680.webp" srcset="uploads/instagram-perfil-340.webp 340w, uploads/instagram-perfil-680.webp 680w, uploads/instagram-perfil.webp 943w" sizes="180px" width="943" height="1908" loading="lazy" decoding="async" alt="Perfil @jukcattaniadvogados no Instagram: 1.329 posts e 29 mil seguidores" style="width:100%;height:auto;display:block">
+            </a>
           </div>
         </div>
       </section>
