@@ -28,7 +28,7 @@
   <link rel="apple-touch-icon" href="apple-touch-icon.png">
 
   <link rel="preload" href="fonts/roboto-variable-latin.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="preload" href="uploads/hero-palestra-plateia.webp" as="image" fetchpriority="high" imagesrcset="uploads/hero-palestra-plateia-768.webp 768w, uploads/hero-palestra-plateia-900.webp 900w, uploads/hero-palestra-plateia-1280.webp 1280w, uploads/hero-palestra-plateia.webp 2048w" imagesizes="100vw">
+  <link rel="preload" href="uploads/hero-reuniao-time.webp" as="image" fetchpriority="high" imagesrcset="uploads/hero-reuniao-time-768.webp 768w, uploads/hero-reuniao-time-900.webp 900w, uploads/hero-reuniao-time-1280.webp 1280w, uploads/hero-reuniao-time.webp 1641w" imagesizes="100vw">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -81,6 +81,21 @@
       {
         "@type": "FAQPage",
         "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Para quem é a assessoria?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Para clínicas de harmonização que já estão atendendo e querem crescer com segurança. Se você está começando agora, temos soluções pensadas para esse momento." }
+          },
+          {
+            "@type": "Question",
+            "name": "Como funciona o contrato?",
+            "acceptedAnswer": { "@type": "Answer", "text": "A assessoria tem duração de 12 meses, com valor mensal. Nesse período, as entregas ativas chegam sem você precisar pedir." }
+          },
+          {
+            "@type": "Question",
+            "name": "Atende a minha cidade?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Sim. A Juk Cattani atende clínicas de todo o Brasil. O atendimento é online, com um time dedicado acompanhando a sua clínica de perto, e os processos são conduzidos onde a sua clínica estiver." }
+          },
           {
             "@type": "Question",
             "name": "Já tenho advogado, por que trocar?",
@@ -245,6 +260,59 @@
     .hv-8:hover {
       color: #F7F4EF !important
     }
+
+
+    .ig-bloco {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: clamp(36px, 5vw, 72px);
+      align-items: center
+    }
+
+    .ig-celular-wrap {
+      width: 340px
+    }
+
+    @media (max-width: 760px) {
+      .ig-bloco {
+        grid-template-columns: 1fr
+      }
+
+      .ig-celular-wrap {
+        width: 100%
+      }
+
+      .ig-texto {
+        align-items: center;
+        text-align: center
+      }
+
+      .ig-texto .ig-botao {
+        align-self: center !important
+      }
+    }
+
+    .ig-rolagem {
+      scrollbar-width: none
+    }
+
+    .ig-rolagem::-webkit-scrollbar {
+      display: none
+    }
+
+    .ig-rolagem:hover {
+      color: #0E1720 !important
+    }
+
+    .ig-botao {
+      transition: transform 0.2s ease, background 0.2s ease
+    }
+
+    .ig-botao:hover {
+      color: #0E1720 !important;
+      background: #FFFFFF !important;
+      transform: translateY(-2px)
+    }
   </style>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -295,16 +363,16 @@
 
       <section data-screen-label="Hero" style="background:#0E1720;color:#F7F4EF;padding:0">
         <div style="position:relative;min-height:clamp(520px,76vh,720px);display:flex;align-items:center;justify-content:center;background:#0E1720;overflow:hidden">
-          <img src="uploads/hero-palestra-plateia.webp" srcset="uploads/hero-palestra-plateia-768.webp 768w, uploads/hero-palestra-plateia-900.webp 900w, uploads/hero-palestra-plateia-1280.webp 1280w, uploads/hero-palestra-plateia.webp 2048w" sizes="100vw" fetchpriority="high" decoding="async" alt="Guilherme Juk Cattani palestrando para uma plateia de profissionais da harmonização" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 50%;display:block">
+          <img src="uploads/hero-reuniao-time.webp" srcset="uploads/hero-reuniao-time-768.webp 768w, uploads/hero-reuniao-time-900.webp 900w, uploads/hero-reuniao-time-1280.webp 1280w, uploads/hero-reuniao-time.webp 1641w" sizes="100vw" fetchpriority="high" decoding="async" alt="Time da Juk Cattani em reunião de análise de caso na sede do escritório" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 50%;display:block">
           <div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(14,23,32,0.72) 0%,rgba(14,23,32,0.84) 100%)"></div>
           <div style="position:relative;max-width:960px;padding:clamp(72px,10vw,120px) 24px clamp(48px,6vw,80px);display:flex;flex-direction:column;align-items:center;gap:26px;text-align:center">
             <img src="uploads/rodape-logo-branco.webp" srcset="uploads/rodape-logo-branco-340.webp 340w, uploads/rodape-logo-branco.webp 520w" sizes="(max-width: 882px) 150px, (max-width: 1176px) 17vw, 200px" alt="Juk Cattani Sociedade de Advogados" width="520" height="127" decoding="async" style="width:clamp(150px,17vw,200px);height:auto;display:block">
-            <span style="font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:12px;letter-spacing:0.16em;text-transform:uppercase;color:#E8C0AB">Assessoria jurídica contínua · Harmonização</span>
-            <h1 style="margin:0;font-size:clamp(34px,5.4vw,66px);line-height:1.04;font-weight:900;letter-spacing:-0.02em;text-wrap:pretty;max-width:22ch">Um jurídico só pra você, com a estratégia que a sua clínica precisa</h1>
+            <span style="font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:12px;letter-spacing:0.16em;text-transform:uppercase;color:#E8C0AB">O 1º escritório do Brasil dedicado ao Direito na harmonização</span>
+            <h1 style="margin:0;font-size:clamp(34px,5.4vw,66px);line-height:1.04;font-weight:900;letter-spacing:-0.02em;text-wrap:pretty;max-width:22ch">Assessoria jurídica contínua para você atender em paz enquanto um time cuida da sua clínica</h1>
 
-            <p style="margin:0;font-size:clamp(16px,1.5vw,18px);line-height:1.65;color:#D7DEE3;max-width:52ch;text-wrap:pretty">As clínicas que mais crescem no país não esperam o processo chegar para agir. Elas têm um time cuidando disso todo mês, antes que vire notícia, antes que vire prejuízo.</p>
+            <p style="margin:0;font-size:clamp(16px,1.5vw,18px);line-height:1.65;color:#D7DEE3;max-width:52ch;text-wrap:pretty">Documentos personalizados, análise de redes sociais, contratos, mediação com pacientes e processos. Você repassa o caso e a Juk Cattani conduz.</p>
             <div style="display:flex;flex-wrap:wrap;gap:12px;align-items:center;justify-content:center">
-              <a href="https://form.respondi.app/ZhDd3x3V" style="display:inline-flex;align-items:center;justify-content:center;background:#A04E2C;color:#FFFFFF;font-size:16px;font-weight:500;padding:17px 30px;border-radius:3px;min-height:54px" class="hv-3">Quero proteger a minha clínica</a>
+              <a href="https://form.respondi.app/ZhDd3x3V" style="display:inline-flex;align-items:center;justify-content:center;background:#A04E2C;color:#FFFFFF;font-size:16px;font-weight:500;padding:17px 30px;border-radius:3px;min-height:54px;text-align:center;line-height:1.3" class="hv-3">Quero saber se a assessoria serve para a minha clínica</a>
             </div>
           </div>
         </div>
@@ -348,8 +416,8 @@
       <section data-screen-label="Por dentro do escritório" style="background:#F7F4EF;padding:clamp(40px,5vw,72px) 24px clamp(28px,3.5vw,48px)">
         <div style="max-width:1240px;margin:0 auto;border-top:1px solid #DED7CC;padding-top:clamp(28px,3vw,40px);display:flex;flex-direction:column;gap:clamp(28px,3.5vw,44px)">
           <div style="display:flex;flex-direction:column;align-items:center;gap:16px;text-align:center;max-width:660px;margin:0 auto">
-            <span style="font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:#8F4526">Por dentro do escritório</span>
-            <h2 style="margin:0;font-size:clamp(30px,3.6vw,46px);line-height:1.08;font-weight:700;letter-spacing:-0.015em;text-wrap:pretty">Não é um advogado. É uma estrutura.</h2>
+            <span style="font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:#8F4526">Por dentro da Juk Cattani</span>
+            <h2 style="margin:0;font-size:clamp(30px,3.6vw,46px);line-height:1.08;font-weight:700;letter-spacing:-0.015em;text-wrap:pretty">Um escritório inteiro dedicado à harmonização</h2>
           </div>
 
           <div>
@@ -452,13 +520,13 @@
               <p style="margin:0;font-size:15px;line-height:1.6;color:#4A555E;max-width:34ch;text-wrap:pretty">Especialistas te atendendo. Não um chatbot, não um estagiário sozinho.</p>
             </div>
           </div>
-          <div style="position:relative;width:100%;max-width:840px;margin:0 auto;aspect-ratio:16/9;border-radius:4px;overflow:hidden;background:#E7E1D8">
-            <img decoding="async" src="uploads/oquemuda-treinamento.webp" srcset="uploads/oquemuda-treinamento-420.webp 420w, uploads/oquemuda-treinamento-660.webp 660w, uploads/oquemuda-treinamento-840.webp 840w, uploads/oquemuda-treinamento-1060.webp 1060w, uploads/oquemuda-treinamento.webp 1680w" sizes="(max-width: 888px) calc(100vw - 48px), 840px" alt="Equipe do Juk Cattani em treinamento interno na sede, acompanhando apresentação do time" loading="lazy" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 45%;display:block">
+          <div style="position:relative;width:100%;max-width:840px;margin:0 auto;aspect-ratio:1198/848;border-radius:4px;overflow:hidden;background:#E7E1D8">
+            <img decoding="async" src="uploads/time-comercial.webp" srcset="uploads/time-comercial-420.webp 420w, uploads/time-comercial-660.webp 660w, uploads/time-comercial-840.webp 840w, uploads/time-comercial.webp 1198w" sizes="(max-width: 888px) calc(100vw - 48px), 840px" alt="Time da Juk Cattani reunido na sede do escritório em Balneário Camboriú" loading="lazy" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 50%;display:block">
           </div>
 
           <p style="margin:clamp(20px,3vw,44px) auto 0;max-width:60ch;text-align:center;font-size:clamp(28px,3.8vw,48px);line-height:1.12;font-weight:700;letter-spacing:-0.02em;color:#0E1720;text-wrap:balance">Cada caso resolvido gera aprendizado e <span style="color:#A04E2C">prevenção</span> para os próximos clientes.</p>
 
-          <div style="display:flex;justify-content:center;margin-top:clamp(24px,3vw,36px)"><a href="https://form.respondi.app/ZhDd3x3V" style="display:inline-flex;align-items:center;justify-content:center;background:#0E1720;color:#F7F4EF;font-size:16px;font-weight:500;padding:17px 30px;border-radius:3px;min-height:54px" class="hv-2">Quero essa estrutura na minha clínica</a></div>
+          <div style="display:flex;justify-content:center;margin-top:clamp(24px,3vw,36px)"><a href="https://form.respondi.app/ZhDd3x3V" style="display:inline-flex;align-items:center;justify-content:center;background:#0E1720;color:#F7F4EF;font-size:16px;font-weight:500;padding:17px 30px;border-radius:3px;min-height:54px;text-align:center;line-height:1.3" class="hv-2">Quero saber se a assessoria serve para a minha clínica</a></div>
 
         </div>
       </section>
@@ -490,7 +558,8 @@
                 </div>
                 <span style="position:absolute;right:-6px;bottom:-6px;min-width:30px;height:30px;padding:0 6px;border-radius:50%;background:#0E1720;color:#F7F4EF;font-size:12px;font-weight:700;letter-spacing:0.04em;display:flex;align-items:center;justify-content:center">01</span>
               </div>
-              <h3 style="margin:0;font-size:15px;line-height:1.35;font-weight:700;max-width:20ch;text-wrap:pretty">Termos de documentos da sua clínica</h3>
+              <h3 style="margin:0;font-size:15px;line-height:1.35;font-weight:700;max-width:20ch;text-wrap:pretty">Termos personalizados para a sua clínica</h3>
+              <p style="margin:-4px 0 0;font-size:14px;line-height:1.55;color:#4A555E;max-width:30ch;text-wrap:pretty">Todos os documentos necessários para os procedimentos que você realiza.</p>
             </div>
             <div style="display:flex;flex-direction:column;align-items:center;gap:14px;text-align:center">
               <div style="position:relative">
@@ -503,6 +572,7 @@
                 <span style="position:absolute;right:-6px;bottom:-6px;min-width:30px;height:30px;padding:0 6px;border-radius:50%;background:#0E1720;color:#F7F4EF;font-size:12px;font-weight:700;letter-spacing:0.04em;display:flex;align-items:center;justify-content:center">02</span>
               </div>
               <h3 style="margin:0;font-size:15px;line-height:1.35;font-weight:700;max-width:20ch;text-wrap:pretty">Raio-x regulatório</h3>
+              <p style="margin:-4px 0 0;font-size:14px;line-height:1.55;color:#4A555E;max-width:30ch;text-wrap:pretty">Um diagnóstico de como a sua clínica está diante do seu conselho, Anvisa e Vigilância Sanitária, com o que precisa de ajuste.</p>
             </div>
             <div style="display:flex;flex-direction:column;align-items:center;gap:14px;text-align:center">
               <div style="position:relative">
@@ -515,6 +585,7 @@
                 <span style="position:absolute;right:-6px;bottom:-6px;min-width:30px;height:30px;padding:0 6px;border-radius:50%;background:#0E1720;color:#F7F4EF;font-size:12px;font-weight:700;letter-spacing:0.04em;display:flex;align-items:center;justify-content:center">03</span>
               </div>
               <h3 style="margin:0;font-size:15px;line-height:1.35;font-weight:700;max-width:20ch;text-wrap:pretty">Raio-x trabalhista da sua equipe</h3>
+              <p style="margin:-4px 0 0;font-size:14px;line-height:1.55;color:#4A555E;max-width:30ch;text-wrap:pretty">Revisão dos contratos e vínculos da sua equipe para você crescer sem surpresas trabalhistas lá na frente.</p>
             </div>
             <div style="display:flex;flex-direction:column;align-items:center;gap:14px;text-align:center">
               <div style="position:relative">
@@ -528,6 +599,7 @@
                 <span style="position:absolute;right:-6px;bottom:-6px;min-width:30px;height:30px;padding:0 6px;border-radius:50%;background:#0E1720;color:#F7F4EF;font-size:12px;font-weight:700;letter-spacing:0.04em;display:flex;align-items:center;justify-content:center">04</span>
               </div>
               <h3 style="margin:0;font-size:15px;line-height:1.35;font-weight:700;max-width:20ch;text-wrap:pretty">Análise das suas redes sociais</h3>
+              <p style="margin:-4px 0 0;font-size:14px;line-height:1.55;color:#4A555E;max-width:30ch;text-wrap:pretty">Revisão da sua bio e posts para você divulgar seu trabalho dentro das regras do seu conselho.</p>
             </div>
             <div style="display:flex;flex-direction:column;align-items:center;gap:14px;text-align:center">
               <div style="position:relative">
@@ -539,6 +611,7 @@
                 <span style="position:absolute;right:-6px;bottom:-6px;min-width:30px;height:30px;padding:0 6px;border-radius:50%;background:#0E1720;color:#F7F4EF;font-size:12px;font-weight:700;letter-spacing:0.04em;display:flex;align-items:center;justify-content:center">05</span>
               </div>
               <h3 style="margin:0;font-size:15px;line-height:1.35;font-weight:700;max-width:20ch;text-wrap:pretty">Análise da apólice de seguros</h3>
+              <p style="margin:-4px 0 0;font-size:14px;line-height:1.55;color:#4A555E;max-width:30ch;text-wrap:pretty">A gente lê a sua apólice e mostra exatamente o que ela cobre, antes de você precisar usar.</p>
             </div>
             <div style="display:flex;flex-direction:column;align-items:center;gap:14px;text-align:center">
               <div style="position:relative">
@@ -550,6 +623,7 @@
                 <span style="position:absolute;right:-6px;bottom:-6px;min-width:30px;height:30px;padding:0 6px;border-radius:50%;background:#0E1720;color:#F7F4EF;font-size:12px;font-weight:700;letter-spacing:0.04em;display:flex;align-items:center;justify-content:center">06</span>
               </div>
               <h3 style="margin:0;font-size:15px;line-height:1.35;font-weight:700;max-width:20ch;text-wrap:pretty">Gestão de relacionamento e crises</h3>
+              <p style="margin:-4px 0 0;font-size:14px;line-height:1.55;color:#4A555E;max-width:30ch;text-wrap:pretty">Quando um paciente fica insatisfeito ou um caso ganha repercussão, o time assume a conversa e conduz o caso por você.</p>
             </div>
             <div style="display:flex;flex-direction:column;align-items:center;gap:14px;text-align:center">
               <div style="position:relative">
@@ -562,6 +636,7 @@
                 <span style="position:absolute;right:-6px;bottom:-6px;min-width:30px;height:30px;padding:0 6px;border-radius:50%;background:#0E1720;color:#F7F4EF;font-size:12px;font-weight:700;letter-spacing:0.04em;display:flex;align-items:center;justify-content:center">07</span>
               </div>
               <h3 style="margin:0;font-size:15px;line-height:1.35;font-weight:700;max-width:20ch;text-wrap:pretty">Pack LGPD</h3>
+              <p style="margin:-4px 0 0;font-size:14px;line-height:1.55;color:#4A555E;max-width:30ch;text-wrap:pretty">Documentos e orientações para a sua clínica guardar dados e fotos de pacientes com segurança e dentro da lei.</p>
             </div>
           </div>
         </div>
@@ -611,7 +686,7 @@
             <h2 style="margin:0;font-size:clamp(28px,3.6vw,48px);line-height:1.08;font-weight:700;letter-spacing:-0.02em;max-width:26ch;text-wrap:pretty">A diferença entre ter um generalista e ter um time cuidando da clínica.</h2>
             <p style="margin:0;font-size:clamp(18px,1.9vw,24px);line-height:1.4;color:#F7F4EF;max-width:40ch;text-wrap:pretty">Advogado generalista usa o seu caso pra entender o que vai defender. O nosso time já resolveu casos parecidos mil vezes.</p>
 
-            <a href="https://form.respondi.app/ZhDd3x3V" style="display:inline-flex;align-items:center;justify-content:center;background:#A04E2C;color:#FFFFFF;font-size:16px;font-weight:500;padding:17px 30px;border-radius:3px;min-height:54px" class="hv-3">Falar com o time agora</a>
+            <a href="https://form.respondi.app/ZhDd3x3V" style="display:inline-flex;align-items:center;justify-content:center;background:#A04E2C;color:#FFFFFF;font-size:16px;font-weight:500;padding:17px 30px;border-radius:3px;min-height:54px;text-align:center;line-height:1.3" class="hv-3">Quero saber se a assessoria serve para a minha clínica</a>
 
           </div>
         </div>
@@ -652,11 +727,23 @@
           <div style="min-width:0;display:flex;flex-direction:column;gap:18px">
             <span style="font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:#8F4526">Dúvidas frequentes</span>
             <h2 style="margin:0;font-size:clamp(28px,3.2vw,40px);line-height:1.1;font-weight:700;letter-spacing:-0.015em;max-width:20ch;text-wrap:pretty">O que fica no caminho antes de fechar</h2>
-            <a href="https://api.whatsapp.com/send?phone=5547996941734&amp;text=Ol%C3%A1%20equipe%20Juk%20Cattani%2C%20vim%20pela%20p%C3%A1gina%20de%20assessoria%20e%20gostaria%20de%20receber%20um%20atendimento%20personalizado" style="display:inline-flex;align-items:center;justify-content:center;background:#0E1720;color:#F7F4EF;font-size:15px;font-weight:500;padding:15px 24px;border-radius:3px;min-height:50px;align-self:flex-start" class="hv-2">Falar com o time agora</a>
+            <a href="https://api.whatsapp.com/send?phone=5547996941734&amp;text=Ol%C3%A1%20equipe%20Juk%20Cattani%2C%20vim%20pela%20p%C3%A1gina%20de%20assessoria%20e%20gostaria%20de%20receber%20um%20atendimento%20personalizado" style="display:inline-flex;align-items:center;justify-content:center;background:#0E1720;color:#F7F4EF;font-size:15px;font-weight:500;padding:15px 24px;border-radius:3px;min-height:50px;align-self:flex-start;text-align:center;line-height:1.3" class="hv-2">Quero saber se a assessoria serve para a minha clínica</a>
           </div>
 
           <div style="min-width:0;display:flex;flex-direction:column;gap:1px;background:#DED7CC;border-top:1px solid #DED7CC;border-bottom:1px solid #DED7CC">
             <details open style="background:#F7F4EF;padding:20px 0">
+              <summary style="cursor:pointer;list-style:none;font-size:clamp(17px,1.6vw,20px);font-weight:500;line-height:1.35;color:#0E1720;text-wrap:pretty">Para quem é a assessoria?</summary>
+              <p style="margin:14px 0 0;font-size:15px;line-height:1.65;color:#4A555E;max-width:60ch;text-wrap:pretty">Para clínicas de harmonização que já estão atendendo e querem crescer com segurança. Se você está começando agora, temos soluções pensadas para esse momento.</p>
+            </details>
+            <details style="background:#F7F4EF;padding:20px 0">
+              <summary style="cursor:pointer;list-style:none;font-size:clamp(17px,1.6vw,20px);font-weight:500;line-height:1.35;color:#0E1720;text-wrap:pretty">Como funciona o contrato?</summary>
+              <p style="margin:14px 0 0;font-size:15px;line-height:1.65;color:#4A555E;max-width:60ch;text-wrap:pretty">A assessoria tem duração de 12 meses, com valor mensal. Nesse período, as entregas ativas chegam sem você precisar pedir.</p>
+            </details>
+            <details style="background:#F7F4EF;padding:20px 0">
+              <summary style="cursor:pointer;list-style:none;font-size:clamp(17px,1.6vw,20px);font-weight:500;line-height:1.35;color:#0E1720;text-wrap:pretty">Atende a minha cidade?</summary>
+              <p style="margin:14px 0 0;font-size:15px;line-height:1.65;color:#4A555E;max-width:60ch;text-wrap:pretty">Sim. A Juk Cattani atende clínicas de todo o Brasil. O atendimento é online, com um time dedicado acompanhando a sua clínica de perto, e os processos são conduzidos onde a sua clínica estiver.</p>
+            </details>
+            <details style="background:#F7F4EF;padding:20px 0">
               <summary style="cursor:pointer;list-style:none;font-size:clamp(17px,1.6vw,20px);font-weight:500;line-height:1.35;color:#0E1720;text-wrap:pretty">Já tenho advogado, por que trocar?</summary>
               <p style="margin:14px 0 0;font-size:15px;line-height:1.65;color:#4A555E;max-width:60ch;text-wrap:pretty">Advogado generalista sabe leis. Advogado especializado sabe harmonização, conhece as resoluções do seu conselho, da Vigilância Sanitária e já viu dezenas de casos parecidos com o seu. As clínicas que crescem mais rápido têm um time que entende do mercado tanto quanto elas mesmas.</p>
             </details>
@@ -688,8 +775,112 @@
             <p style="margin:0;font-size:clamp(16px,1.4vw,18px);line-height:1.6;color:#C3CDD4;max-width:48ch;text-wrap:pretty">O cuidado jurídico contínuo que sustenta as clínicas mais respeitadas da harmonização, pelo time que mais entende de harmonização no Brasil.</p>
             <p style="margin:0;font-size:clamp(17px,1.6vw,20px);line-height:1.45;font-weight:500;color:#F7F4EF;max-width:36ch;text-wrap:pretty">Faça parte do time dos negócios mais valiosos da harmonização.</p>
             <div style="display:flex;flex-wrap:wrap;gap:12px;align-items:center;justify-content:center">
-              <a href="https://form.respondi.app/ZhDd3x3V" style="display:inline-flex;align-items:center;justify-content:center;background:#A04E2C;color:#FFFFFF;font-size:16px;font-weight:500;padding:17px 30px;border-radius:3px;min-height:54px" class="hv-3">Quero proteger a minha clínica</a>
+              <a href="https://form.respondi.app/ZhDd3x3V" style="display:inline-flex;align-items:center;justify-content:center;background:#A04E2C;color:#FFFFFF;font-size:16px;font-weight:500;padding:17px 30px;border-radius:3px;min-height:54px;text-align:center;line-height:1.3" class="hv-3">Quero saber se a assessoria serve para a minha clínica</a>
 
+            </div>
+          </div>
+        </div>
+        <div id="instagram" class="ig-bloco" style="max-width:1080px;margin:clamp(56px,7vw,96px) auto 0;padding-top:clamp(40px,5vw,64px);border-top:1px solid rgba(247,244,239,0.12)">
+          <div class="ig-texto" style="min-width:0;display:flex;flex-direction:column;gap:20px">
+            <span style="display:inline-flex;align-items:center;gap:10px;font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:#E8C0AB">
+              <span aria-hidden="true" style="width:26px;height:26px;border-radius:8px;background:linear-gradient(45deg,#F9CE34 0%,#EE2A7B 50%,#6228D7 100%);display:inline-flex;align-items:center;justify-content:center"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="3" width="18" height="18" rx="5"></rect><circle cx="12" cy="12" r="4"></circle><circle cx="17.2" cy="6.8" r="1.15" fill="#FFFFFF" stroke="none"></circle></svg></span>
+              No Instagram
+            </span>
+            <h2 style="margin:0;font-size:clamp(28px,3.4vw,44px);line-height:1.08;font-weight:700;letter-spacing:-0.02em;max-width:18ch;text-wrap:pretty">Acompanhe a Juk Cattani por dentro</h2>
+            <p style="margin:0;font-size:clamp(16px,1.4vw,18px);line-height:1.6;color:#C3CDD4;max-width:40ch;text-wrap:pretty">Bastidores do escritório, casos reais e as mudanças nas regras da harmonização explicadas de um jeito que você aplica na sua clínica.</p>
+            <a href="https://www.instagram.com/jukcattaniadvogados/" target="_blank" rel="noopener" class="ig-botao" style="align-self:flex-start;display:inline-flex;align-items:center;gap:12px;padding:10px 22px 10px 10px;border-radius:999px;background:#F7F4EF;color:#0E1720;font-size:16px;font-weight:600;min-height:54px">
+              <span aria-hidden="true" style="flex:0 0 auto;width:34px;height:34px;border-radius:50%;background:linear-gradient(45deg,#F9CE34 0%,#EE2A7B 50%,#6228D7 100%);display:inline-flex;align-items:center;justify-content:center"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="3" width="18" height="18" rx="5"></rect><circle cx="12" cy="12" r="4"></circle><circle cx="17.2" cy="6.8" r="1.15" fill="#FFFFFF" stroke="none"></circle></svg></span>
+              Seguir @jukcattaniadvogados
+            </a>
+          </div>
+
+          <div class="ig-celular-wrap" style="min-width:0;display:flex;justify-content:center">
+            <div style="position:relative;width:min(320px,100%);padding:12px;border-radius:44px;background:#05090D;box-shadow:0 0 0 1px rgba(247,244,239,0.16),0 30px 60px -20px rgba(0,0,0,0.7),0 0 80px -10px rgba(160,78,44,0.35)">
+              <span aria-hidden="true" style="position:absolute;top:20px;left:50%;transform:translateX(-50%);width:84px;height:22px;border-radius:999px;background:#05090D;z-index:3"></span>
+              <div id="ig-perfil" class="ig-tela" style="position:relative;height:clamp(540px,64vh,620px);border-radius:32px;overflow:hidden;background:#FFFFFF;color:#0E1720;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif">
+                <a href="https://www.instagram.com/jukcattaniadvogados/" target="_blank" rel="noopener" aria-label="Ver o perfil @jukcattaniadvogados no Instagram" class="ig-rolagem" style="position:absolute;inset:0;overflow-y:auto;color:#0E1720;display:block">
+                  <span style="display:flex;justify-content:space-between;align-items:center;padding:14px 24px 0;font-size:13px;font-weight:600;height:40px">
+                    <span>9:41</span>
+                    <span style="display:inline-flex;gap:5px;align-items:center"><span style="width:16px;height:9px;border-radius:2px;background:#0E1720"></span><span style="width:22px;height:11px;border-radius:3px;border:1.5px solid #0E1720;padding:1px"><span style="display:block;height:100%;width:75%;background:#0E1720;border-radius:1px"></span></span></span>
+                  </span>
+
+                  <span style="display:flex;align-items:center;justify-content:space-between;padding:8px 14px">
+                    <span style="display:inline-flex;align-items:center;gap:4px;font-size:17px;font-weight:700">jukcattaniadvogados</span>
+                    <span style="display:inline-flex;gap:16px"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#0E1720" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="3" width="18" height="18" rx="5"/><path d="M12 8v8M8 12h8"/></svg> <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#0E1720" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 7h16M4 12h16M4 17h16"/></svg></span>
+                  </span>
+
+                  <span style="display:flex;align-items:center;gap:18px;padding:6px 14px 0">
+                    <span style="flex:0 0 auto;width:78px;height:78px;border-radius:50%;padding:3px;background:linear-gradient(45deg,#F9CE34 0%,#EE2A7B 50%,#6228D7 100%)"><span style="display:flex;align-items:center;justify-content:center;width:100%;height:100%;border-radius:50%;border:3px solid #FFFFFF;background:#0E1720"><img class="adiada" data-src="uploads/rodape-logo-branco-340.webp" alt="" decoding="async" style="width:76%;height:auto;display:block"></span></span>
+                    <span style="flex:1 1 auto;display:flex;justify-content:space-around"><span style="display:flex;flex-direction:column;align-items:center;gap:1px"><b style="font-size:15px;font-weight:700">XXX</b><span style="font-size:12px;color:#0E1720">posts</span></span><span style="display:flex;flex-direction:column;align-items:center;gap:1px"><b style="font-size:15px;font-weight:700">XX mil</b><span style="font-size:12px;color:#0E1720">seguidores</span></span><span style="display:flex;flex-direction:column;align-items:center;gap:1px"><b style="font-size:15px;font-weight:700">XXX</b><span style="font-size:12px;color:#0E1720">seguindo</span></span></span>
+                  </span>
+
+                  <span style="display:flex;flex-direction:column;gap:2px;padding:10px 14px 0;font-size:13px;line-height:1.38">
+                    <b style="font-weight:600">Juk Cattani Advogados</b>
+                    <span style="color:#737373">Escritório de advocacia</span>
+                    <span>O 1º escritório do Brasil dedicado ao Direito na harmonização ⚖️</span>
+                    <span>+60 advogados e especialistas</span>
+                    <span>📍 Balneário Camboriú · Atuação nacional</span>
+                    <span style="color:#00376B;font-weight:500">jukcattani.com.br</span>
+                  </span>
+
+                  <span style="display:grid;grid-template-columns:1fr 1fr;gap:6px;padding:12px 14px 0">
+                    <span style="display:flex;align-items:center;justify-content:center;height:32px;border-radius:8px;background:#0095F6;color:#FFFFFF;font-size:13px;font-weight:600">Seguir</span>
+                    <span style="display:flex;align-items:center;justify-content:center;height:32px;border-radius:8px;background:#EFEFEF;font-size:13px;font-weight:600">Mensagem</span>
+                  </span>
+
+                  <span class="ig-destaques" style="display:flex;gap:12px;padding:14px 14px 4px;overflow:hidden">
+                      <span style="flex:0 0 auto;display:flex;flex-direction:column;align-items:center;gap:5px;width:60px">
+                        <span style="width:56px;height:56px;border-radius:50%;padding:2px;border:1px solid #DBDBDB"><img class="adiada" data-src="uploads/escritorio-recepcao-marca-340.webp" alt="" decoding="async" style="width:100%;height:100%;border-radius:50%;object-fit:cover;display:block"></span>
+                        <span style="font-size:11px;color:#0E1720;white-space:nowrap">Escritório</span>
+                      </span>
+                      <span style="flex:0 0 auto;display:flex;flex-direction:column;align-items:center;gap:5px;width:60px">
+                        <span style="width:56px;height:56px;border-radius:50%;padding:2px;border:1px solid #DBDBDB"><img class="adiada" data-src="uploads/escritorio-congresso-292.webp" alt="" decoding="async" style="width:100%;height:100%;border-radius:50%;object-fit:cover;display:block"></span>
+                        <span style="font-size:11px;color:#0E1720;white-space:nowrap">Eventos</span>
+                      </span>
+                      <span style="flex:0 0 auto;display:flex;flex-direction:column;align-items:center;gap:5px;width:60px">
+                        <span style="width:56px;height:56px;border-radius:50%;padding:2px;border:1px solid #DBDBDB"><img class="adiada" data-src="uploads/escritorio-reuniao-time-340.webp" alt="" decoding="async" style="width:100%;height:100%;border-radius:50%;object-fit:cover;display:block"></span>
+                        <span style="font-size:11px;color:#0E1720;white-space:nowrap">Time</span>
+                      </span>
+                      <span style="flex:0 0 auto;display:flex;flex-direction:column;align-items:center;gap:5px;width:60px">
+                        <span style="width:56px;height:56px;border-radius:50%;padding:2px;border:1px solid #DBDBDB"><img class="adiada" data-src="uploads/fundador-guilherme-342.webp" alt="" decoding="async" style="width:100%;height:100%;border-radius:50%;object-fit:cover;display:block"></span>
+                        <span style="font-size:11px;color:#0E1720;white-space:nowrap">Guilherme</span>
+                      </span>
+                  </span>
+
+                  <span style="display:grid;grid-template-columns:repeat(3,1fr);margin-top:10px;border-top:1px solid #DBDBDB">
+                    <span style="display:flex;justify-content:center;padding:10px 0;border-bottom:1.5px solid #0E1720">ICON_
+                      <span style="aspect-ratio:4/5;overflow:hidden;background:#EFEFEF"><img class="adiada" data-src="uploads/time-comercial-420.webp" alt="" decoding="async" style="width:100%;height:100%;object-fit:cover;display:block"></span>
+                      <span style="aspect-ratio:4/5;overflow:hidden;background:#EFEFEF"><img class="adiada" data-src="uploads/hero-reuniao-time-768.webp" alt="" decoding="async" style="width:100%;height:100%;object-fit:cover;display:block"></span>
+                      <span style="aspect-ratio:4/5;overflow:hidden;background:#EFEFEF"><img class="adiada" data-src="uploads/escritorio-congresso-292.webp" alt="" decoding="async" style="width:100%;height:100%;object-fit:cover;display:block"></span>
+                      <span style="aspect-ratio:4/5;overflow:hidden;background:#EFEFEF"><img class="adiada" data-src="uploads/escritorio-analise-caso-270.webp" alt="" decoding="async" style="width:100%;height:100%;object-fit:cover;display:block"></span>
+                      <span style="aspect-ratio:4/5;overflow:hidden;background:#EFEFEF"><img class="adiada" data-src="uploads/fundador-guilherme-342.webp" alt="" decoding="async" style="width:100%;height:100%;object-fit:cover;display:block"></span>
+                      <span style="aspect-ratio:4/5;overflow:hidden;background:#EFEFEF"><img class="adiada" data-src="uploads/escritorio-recepcao-marca-340.webp" alt="" decoding="async" style="width:100%;height:100%;object-fit:cover;display:block"></span>
+                      <span style="aspect-ratio:4/5;overflow:hidden;background:#EFEFEF"><img class="adiada" data-src="uploads/escritorio-treinamento-252.webp" alt="" decoding="async" style="width:100%;height:100%;object-fit:cover;display:block"></span>
+                      <span style="aspect-ratio:4/5;overflow:hidden;background:#EFEFEF"><img class="adiada" data-src="uploads/escritorio-sala-guilherme-350.webp" alt="" decoding="async" style="width:100%;height:100%;object-fit:cover;display:block"></span>
+                      <span style="aspect-ratio:4/5;overflow:hidden;background:#EFEFEF"><img class="adiada" data-src="uploads/escritorio-open-space-420.webp" alt="" decoding="async" style="width:100%;height:100%;object-fit:cover;display:block"></span>
+                      <span style="aspect-ratio:4/5;overflow:hidden;background:#EFEFEF"><img class="adiada" data-src="uploads/escritorio-atendimento-video-284.webp" alt="" decoding="async" style="width:100%;height:100%;object-fit:cover;display:block"></span>
+                      <span style="aspect-ratio:4/5;overflow:hidden;background:#EFEFEF"><img class="adiada" data-src="uploads/clinicas-guilherme-estudo-342.webp" alt="" decoding="async" style="width:100%;height:100%;object-fit:cover;display:block"></span>
+                      <span style="aspect-ratio:4/5;overflow:hidden;background:#EFEFEF"><img class="adiada" data-src="uploads/comparativo-palco-evento-768.webp" alt="" decoding="async" style="width:100%;height:100%;object-fit:cover;display:block"></span></span>
+                    <span style="display:flex;justify-content:center;padding:10px 0;opacity:0.45"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0E1720" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="3" width="18" height="18" rx="5"/><path d="M3 8h18M8 3l3 5M14 3l3 5"/><path d="M10 11.5v5l4-2.5z"/></svg></span>
+                    <span style="display:flex;justify-content:center;padding:10px 0;opacity:0.45"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0E1720" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="3" width="18" height="18" rx="3"/><circle cx="12" cy="10" r="3"/><path d="M6.5 19c1-2.6 3-4 5.5-4s4.5 1.4 5.5 4"/></svg></span>
+                  </span>
+
+                  <span style="display:grid;grid-template-columns:repeat(3,1fr);gap:2px">
+                      <span style="aspect-ratio:4/5;overflow:hidden;background:#EFEFEF"><img class="adiada" data-src="uploads/time-comercial-420.webp" alt="" decoding="async" style="width:100%;height:100%;object-fit:cover;display:block"></span>
+                      <span style="aspect-ratio:4/5;overflow:hidden;background:#EFEFEF"><img class="adiada" data-src="uploads/hero-reuniao-time-768.webp" alt="" decoding="async" style="width:100%;height:100%;object-fit:cover;display:block"></span>
+                      <span style="aspect-ratio:4/5;overflow:hidden;background:#EFEFEF"><img class="adiada" data-src="uploads/escritorio-congresso-292.webp" alt="" decoding="async" style="width:100%;height:100%;object-fit:cover;display:block"></span>
+                      <span style="aspect-ratio:4/5;overflow:hidden;background:#EFEFEF"><img class="adiada" data-src="uploads/escritorio-analise-caso-270.webp" alt="" decoding="async" style="width:100%;height:100%;object-fit:cover;display:block"></span>
+                      <span style="aspect-ratio:4/5;overflow:hidden;background:#EFEFEF"><img class="adiada" data-src="uploads/fundador-guilherme-342.webp" alt="" decoding="async" style="width:100%;height:100%;object-fit:cover;display:block"></span>
+                      <span style="aspect-ratio:4/5;overflow:hidden;background:#EFEFEF"><img class="adiada" data-src="uploads/escritorio-recepcao-marca-340.webp" alt="" decoding="async" style="width:100%;height:100%;object-fit:cover;display:block"></span>
+                      <span style="aspect-ratio:4/5;overflow:hidden;background:#EFEFEF"><img class="adiada" data-src="uploads/escritorio-treinamento-252.webp" alt="" decoding="async" style="width:100%;height:100%;object-fit:cover;display:block"></span>
+                      <span style="aspect-ratio:4/5;overflow:hidden;background:#EFEFEF"><img class="adiada" data-src="uploads/escritorio-sala-guilherme-350.webp" alt="" decoding="async" style="width:100%;height:100%;object-fit:cover;display:block"></span>
+                      <span style="aspect-ratio:4/5;overflow:hidden;background:#EFEFEF"><img class="adiada" data-src="uploads/escritorio-open-space-420.webp" alt="" decoding="async" style="width:100%;height:100%;object-fit:cover;display:block"></span>
+                      <span style="aspect-ratio:4/5;overflow:hidden;background:#EFEFEF"><img class="adiada" data-src="uploads/escritorio-atendimento-video-284.webp" alt="" decoding="async" style="width:100%;height:100%;object-fit:cover;display:block"></span>
+                      <span style="aspect-ratio:4/5;overflow:hidden;background:#EFEFEF"><img class="adiada" data-src="uploads/clinicas-guilherme-estudo-342.webp" alt="" decoding="async" style="width:100%;height:100%;object-fit:cover;display:block"></span>
+                      <span style="aspect-ratio:4/5;overflow:hidden;background:#EFEFEF"><img class="adiada" data-src="uploads/comparativo-palco-evento-768.webp" alt="" decoding="async" style="width:100%;height:100%;object-fit:cover;display:block"></span>
+                  </span>
+                </a>
+              </div>
             </div>
           </div>
         </div>
